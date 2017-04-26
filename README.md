@@ -1,9 +1,11 @@
 # eCommers
-SPA online shop
+
+##  Description:
+    SPA online shop
 
 
-#run project
-npm install
-bower install
-npm start
+## Run project:
+    * npm install
+    * bower install
+    * npm start
 
