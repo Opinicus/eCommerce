@@ -10,10 +10,15 @@ SystemJS.config({
   'libs/systemjs-plugin-babel/systemjs-babel-browser.js',
 
   // app start script
-  'main': 'scripts/main.js'
+  'main': 'scripts/main.js',
 
   //Library files
-  
+  'handlebars': 'bower_components/handlebars/handlebars.js',
+  'jquery' : 'bower_components/jquery/dist/jquery.js',
+  'navigo' : 'bower_components/navigo/lib/navigo.js',
+  'cryptojs': 'bower_components/crypto-js/crypto-js.js',
+  'toastr' : 'bower_components/toastr/toastr.js'
+
  }
 });
 
