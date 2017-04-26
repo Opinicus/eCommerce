@@ -26,8 +26,8 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
+                    <li class="active"><a href="#/home">Home</a></li>
+                    <li><a href="#/products">Products</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Add Product</a></li>
                 </ul>
@@ -39,18 +39,11 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">BLACK FRIDAY DEAL</div>
-                    <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-                </div>
-            </div>
+    <div id="products">
+        <div class="container">
 
-        </div>
-    </div><br>
+        </div><br>
+    </div>
 
 
     <footer>
@@ -60,7 +53,8 @@
 
     <script src="libs/systemjs/dist/system.js"></script>
     <script src="/scripts/system-config.js"></script>
-
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <script src="bower_components/navigo/lib/navigo.js"></script>
 </body>
 
 </html>

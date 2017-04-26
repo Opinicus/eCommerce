@@ -1,0 +1,23 @@
+{
+  "users": [],
+  "products": [
+    {
+      "title": "Product 1",
+      "price": 1000,
+      "description": "Amazing! WOW!",
+      "img": "url"
+    },
+    {
+      "title": "product 2",
+      "price": 100,
+      "img": "neshto",
+      "description": "neshto2"
+    },
+    {
+      "title": "product 2",
+      "price": 100,
+      "img": "neshto",
+      "description": "neshto2"
+    }
+  ]
+}

@@ -23,9 +23,9 @@ app.use(bodyParser.json());
 
 
 //Products controller
-// var productController = require("./controllers/product-controller")(db);
-// app.get("/api/products", productController.get);
-// app.post("/api/products", productController.post);
+var productController = require("./controllers/product-controller")(db);
+app.get("/api/products", productController.get);
+app.post("/api/products", productController.post);
 
 
 app.listen(port, (err) => {  
