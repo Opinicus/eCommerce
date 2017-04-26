@@ -1,0 +1,7 @@
+# Bower dependency directory (https://bower.io/)
+public/bower_components
+
+# Dependency directories
+node_modules/
+
+.vscode/

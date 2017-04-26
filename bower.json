@@ -1,0 +1,24 @@
+{
+  "name": "e-commerce",
+  "description": "SPA online shop",
+  "main": "app.js",
+  "authors": [
+    "Dimitar Pelev",
+    "Iveliin Dinev",
+    "Dragomir Dragomirov"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Opinicus/eCommerce",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
