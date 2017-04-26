@@ -2,20 +2,13 @@
   "users": [
     {
       "username": "pesho",
-      "passHash": {
-        "words": [
-          -474954686,
-          -1728308204,
-          -1694763832,
-          -1720731356,
-          665731556,
-          1687917388,
-          -1533699813,
-          2018687061
-        ],
-        "sigBytes": 32
-      },
-      "authKey": "w@dCVMv(j%YzToHrZq#WaMcXZ=C#m%$=@*Jq!UKMuC+DlDbNYu!iHfzRAI=U"
+      "passHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authKey": "$fpiFl+U*J&V$z=Arx+bWH_MlW*DbPTN*qukS$Sn#qqNGXx%fLfp=#x!OWwM"
+    },
+    {
+      "username": "tosho",
+      "passHash": "3816a11c31d2747dbd20daee5937bc6425c109f5c49444131b7d5846d52c7ca8",
+      "authKey": "OD-AKn(+nxpuD=jz=HeJ_(mmxzukae#OOnUVYDFG%Dsw$ny$swYDV&*rSVlY"
     }
   ],
   "products": [

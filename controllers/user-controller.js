@@ -1,17 +1,16 @@
 module.exports = function (db) {
     function put(request, response) {
-        var allUsers = db.get("users");
-
         var username = request.body.username;
         var passHash = request.body.passHash;
+        // var SHA256 = require("../public/bower_components/crypto-js/sha256");
+        // var passHash = SHA256(password);
+        // passHash = passHash.toString();
 
         var canLogin = false;
 
-        allUsers.forEach(u => {
-            if (u.username === username && u.passHash === passHash) {
-                canLogin = true;
-            }
-        });
+        if (db.get("users").find({username: username, passHash: passHash})) {
+            canLogin =  true;
+        }
 
         if (canLogin) {
             var authKey;
@@ -34,18 +33,21 @@ module.exports = function (db) {
 
     function post(request, response) {
         var username = request.body.username;
-        var password = request.body.password;
-        var SHA256 = require("../public/bower_components/crypto-js/sha256");
-        var passHash = SHA256(password);
-
-        var allUsers = db.get("users");
+        var passHash = request.body.passHash;
+        // var SHA256 = require("../public/bower_components/crypto-js/sha256");
+        // var passHash = SHA256(password);
+        // passHash = passHash.toString();
+        
+        //check for a user with the same username
         var canRegister = true;   
+        if (db.get("users").find({username: username})) {
+            canRegister = false;
+        }
 
-        allUsers.forEach(u => {
-            if (u.username.toLowerCase() === username.toLowerCase()) {
-                canRegister = false;
-            }
-        });
+        //check for empty username of password
+        if (username === "" || passHash === "") {
+            canRegister =  false;
+        }
 
         if (canRegister) {
             //Create authKey here

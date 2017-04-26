@@ -5,11 +5,12 @@ export function login() {
     var $username = $("#username-field").val();
     var $password = $("#password-field").val();
     var passHash = CryptoJS.SHA256($password);
+    passHash = passHash.toString();
 
     putRequest("/api/users", { username: $username, passHash: passHash })
         .then(value => {
             //welcome msg here
-
+            
             //store authKey in localStorage
             window.localStorage.setItem("auth-key", value.result.authKey);
             //show logout button
@@ -30,6 +31,7 @@ export function register() {
     var $username = $("#username-field").val();
     var $password = $("#password-field").val();
     var passHash = CryptoJS.SHA256($password);
+    passHash = passHash.toString();
 
     postRequest("/api/users", { username: $username, passHash: passHash })
         .then(value => {
