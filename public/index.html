@@ -7,9 +7,21 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./styles/login-register.css">
 </head>
 
 <body>
+    <div id="disabled-background" class="hidden"></div>
+
+    <div class="inner-container hidden">
+        <div class="box">
+            <h1 id="login-register-h1"></h1>
+            <input type="text" placeholder="Username"/>
+            <input type="text" placeholder="Password"/>
+            <button id="submit-button"></button>
+        </div>
+     </div>
+
     <header>
         <div class="container text-center" id='header'>
             <h1>Online Store</h1>
@@ -33,8 +45,9 @@
                     <li><a href="#">Add Product</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    <li><a href="#" id="login-button"><span class="glyphicon"></span>Login</a></li>
+                    <li><a href="#" id="register-button"><span class="glyphicon"></span>Register</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
                 </ul>
             </div>
         </div>

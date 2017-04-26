@@ -13,6 +13,7 @@ SystemJS.config({
   'main': 'scripts/main.js',
   'requester': 'scripts/requester.js',
   'loadTemplate': 'scripts/load-template.js',
+  'loginRegisterPopUp': 'scripts/login-register-popup.js',
 
   //Library files
   'handlebars': 'bower_components/handlebars/handlebars.js',

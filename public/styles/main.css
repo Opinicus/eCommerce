@@ -35,3 +35,18 @@ header{
  #social-em:hover {
      color: #f39c12;
  }
+
+ #disabled-background {
+    position:fixed;
+    top:0;
+    left:0;
+    background:lightgray;
+    opacity:0.8;
+    z-index:998;
+    height:100%;
+    width:100%;
+}
+
+.hidden {
+    display: none;
+}
