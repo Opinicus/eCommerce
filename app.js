@@ -22,10 +22,15 @@ app.use(bodyParser.json());
 
 
 
-//Products controller
+//Product controller
 var productController = require("./controllers/product-controller")(db);
 app.get("/api/products", productController.get);
 app.post("/api/products", productController.post);
+
+//User controller
+var userController = require("./controllers/user-controller")(db);
+app.put("/api/users", userController.put);
+app.post("/api/users", userController.post);
 
 
 app.listen(port, (err) => {  
