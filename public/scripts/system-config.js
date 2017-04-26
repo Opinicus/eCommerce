@@ -12,7 +12,7 @@ SystemJS.config({
   // app start script
   'main': 'scripts/main.js',
   'requester': 'scripts/requester.js',
-  'loadTemplate': 'scripts/loadTemplate.js',
+  'loadTemplate': 'scripts/load-template.js',
 
   //Library files
   'handlebars': 'bower_components/handlebars/handlebars.js',
