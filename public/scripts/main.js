@@ -7,11 +7,15 @@ import { loadTemplate } from "loadTemplate";
 var router = new Navigo(null, true);
 
 router.on("/home", () => {
-    
+
 });
 
 router.on("/products", () => {
     loadTemplate("product", "/api/products", "main");
+});
+
+router.on("/contact", () => {
+    loadTemplate("contact", "", "main");
 });
 
 
