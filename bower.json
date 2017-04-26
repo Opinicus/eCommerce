@@ -19,6 +19,10 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "crypto-js": "^3.1.9",
+    "handlebars": "^4.0.5",
+    "navigo": "^4.7.0",
+    "toastr": "^2.1.3"
   }
 }
