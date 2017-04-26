@@ -14,6 +14,7 @@ SystemJS.config({
   'requester': 'scripts/requester.js',
   'loadTemplate': 'scripts/load-template.js',
   'loginRegisterPopUp': 'scripts/login-register-popup.js',
+  'loginRegisterRequest': 'scripts/login-register-request.js',
 
   //Library files
   'handlebars': 'bower_components/handlebars/handlebars.js',
