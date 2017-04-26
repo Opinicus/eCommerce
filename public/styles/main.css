@@ -1,3 +1,37 @@
 header{
     background-color: #D4A190;
 }
+
+#footer{
+    background-color: #D4A190;
+}
+
+
+.social:hover {
+    transform: scale(1.1);
+ }
+ .social {
+    transform: scale(0.8);
+    transition-duration: 0.5;
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-git:hover {
+     color: black;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
