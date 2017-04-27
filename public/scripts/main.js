@@ -30,7 +30,7 @@ $("#logout-button").on("click", logout);
 
 var router = new Navigo(null, true);
 router.on("/home", () => {
-
+    
 });
 router.on("/products", () => {
     loadTemplate("product", "/api/products", "main");
