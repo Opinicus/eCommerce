@@ -1,31 +1,50 @@
+html{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+body{
+    margin-bottom: 70px;
+}
+
 header{
-    background-color: #D4A190;
+    background-color: orange;
 }
 
-#footer{
-    background-color: #D4A190;
+main{
+    overflow: auto;
 }
 
+.navbar{
+    border-radius: 0px;
+}
 
+.footer{
+    padding-top: 1.5em;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    overflow:hidden;
+}
+
+.team-logo{
+    padding-right: 10px;
+    border-radius: 5px; 
+    width: 45px;
+    height: 45px;
+}
+    
 .social:hover {
     transform: scale(1.1);
  }
  .social {
     transform: scale(0.8);
     transition-duration: 0.5;
-     -webkit-transform: scale(0.8);
-     /* Browser Variations: */
-     -moz-transform: scale(0.8);
-     -o-transform: scale(0.8);
-     -webkit-transition-duration: 0.5s;
-     -moz-transition-duration: 0.5s;
-     -o-transition-duration: 0.5s;
  }
-
-/*
-    Multicoloured Hover Variations
-*/
- 
  #social-fb:hover {
      color: #3B5998;
  }
