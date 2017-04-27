@@ -6,7 +6,8 @@
     <title>e-commerce</title>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/product.css">
     <link rel="stylesheet" href="./styles/login-register.css">
 </head>
 
@@ -57,16 +58,36 @@
 
     <main>
         <div class="container">
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                </ul>
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1">Search</span>
+                <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+            </div>
+            <br>
+
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <strong class="panel-title">Latest Products</strong>
+                </div>
+                <div class="panel-body">
+                    <div class="col-sm-4">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">{{this.title}}</div>
+                            <div class="panel-body">
+                                <img src="{{this.url}}" class="img-responsive" alt="Image">
+                            </div>
+                            <div class="panel-footer">
+                                <small class="product-price pull-left">Price: {{this.price}} $</small>
+                                <div class="btn btn-warning pull-right">Add to cart</div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
+
+
 
     </main>
 
@@ -87,7 +108,8 @@
     <script src="libs/systemjs/dist/system.js"></script>
     <script src="/scripts/system-config.js"></script>
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"> </script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
     <script src="bower_components/handlebars/handlebars.js"></script>
     <script src="bower_components/navigo/lib/navigo.js"></script>
     <script src="bower_components/crypto-js/crypto-js.js"></script>
