@@ -5,12 +5,16 @@ module.exports = function (db) {
 
         var canLogin = false;
 
-        if (db.get("users").find({username: username, passHash: passHash})) {
+        var allUsersObjects = db.get("users").value();
+
+        if (allUsersObjects.find(u => u.username === username && u.passHash === passHash)) {
             canLogin =  true;
         }
 
         if (canLogin) {
-            var authKey = db.get("users").find({username: username}).authKey;
+            var currentUser = allUsersObjects
+                .find(u => u.username === username && u.passHash === passHash);
+            var authKey = currentUser.authKey;
             response.json({
                 result: {
                     username: username,
@@ -51,7 +55,7 @@ module.exports = function (db) {
             var User = require("../classes/user-class");
             var registeredUser = new User(username, passHash, authKey);
 
-            db.get("users").push({ username: username, passHash: passHash, authKey: authKey}).write();
+            db.get("users").push(registeredUser).write();
             response.status(201).json({user: registeredUser});
         }
         else {

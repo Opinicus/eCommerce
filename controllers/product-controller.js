@@ -20,7 +20,12 @@ module.exports = function(db) {
         var price = +request.body.price;
         var img = request.body.img;
         var description = request.body.description;
-        db.get("products").push({title: title, price: price, img: img, description: description}).write();
+        var category = request.body.category;
+
+        //Instantiate product class here
+        var Product = require("../classes/product-class");
+        var postedProduct = new Product(title, price, img, description, category);
+        db.get("products").push(postedProduct).write();
     }
 
     return {

@@ -9,6 +9,10 @@ import { hidePopUp as hidePopUp } from 'loginRegisterPopUp';
 import { login as login } from "loginRegisterRequest";
 import { register as register } from "loginRegisterRequest";
 import { logout as logout } from "loginRegisterRequest";
+import { checkForLogged as checkForLogged } from "loginRegisterRequest";
+
+//Check if user is logged in
+checkForLogged();
 
 $("#login-button").on("click", showLoginPopUp);
 $("#register-button").on("click", showRegisterPopUp);
@@ -34,5 +38,10 @@ router.on("/products", () => {
 router.on("/contact", () => {
     loadTemplate("contact", "", "main");
 });
+
+//rework may be needed
+if (window.location.href === "http://localhost:3000/") {
+    router.navigate("/home");
+}
 
 
