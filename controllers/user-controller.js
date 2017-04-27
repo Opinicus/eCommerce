@@ -51,6 +51,8 @@ module.exports = function (db) {
             var authKeyGenerator = require("../utils/auth-key-generator");
             var authKey = authKeyGenerator();
 
+            //Instantiate cart class here
+            
             //Instantiate user class here
             var User = require("../classes/user-class");
             var registeredUser = new User(username, passHash, authKey);

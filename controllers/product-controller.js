@@ -22,9 +22,12 @@ module.exports = function(db) {
         var description = request.body.description;
         var category = request.body.category;
 
+        //get current date
+        var date = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+
         //Instantiate product class here
         var Product = require("../classes/product-class");
-        var postedProduct = new Product(title, price, img, description, category);
+        var postedProduct = new Product(title, price, img, description, category, date);
         db.get("products").push(postedProduct).write();
     }
 
