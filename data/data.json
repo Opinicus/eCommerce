@@ -9,6 +9,11 @@
       "username": "tosho",
       "passHash": "3816a11c31d2747dbd20daee5937bc6425c109f5c49444131b7d5846d52c7ca8",
       "authKey": "OD-AKn(+nxpuD=jz=HeJ_(mmxzukae#OOnUVYDFG%Dsw$ny$swYDV&*rSVlY"
+    },
+    {
+      "username": "asd",
+      "passHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authKey": "^nEOHFEO&JXlKuFiccepTMNLrLeqGBskdMoUIJANCQ+-%fMD-mIz^zRswdIy"
     }
   ],
   "products": [
