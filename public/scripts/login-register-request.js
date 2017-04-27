@@ -10,12 +10,13 @@ export function login() {
     putRequest("/api/users", { username: $username, passHash: passHash })
         .then(value => {
             //welcome msg here
-            
+
+
             //store authKey in localStorage
             window.localStorage.setItem("auth-key", value.result.authKey);
             //show logout button
             $("#logout-button").removeClass("hidden");
-            //remove login/logout buttons
+            //remove login/register buttons
             $("#login-button").addClass("hidden");
             $("#register-button").addClass("hidden");
             //hide popup and disabled-background
@@ -51,4 +52,21 @@ export function logout() {
     $("#register-button").removeClass("hidden");
     //delete authKey from localStorage
     window.localStorage.removeItem("auth-key");
+}
+
+export function checkForLogged() {
+    if (window.localStorage.getItem("auth-key")) {
+        //show logout button
+        $("#logout-button").removeClass("hidden");
+        //remove login/register buttons
+        $("#login-button").addClass("hidden");
+        $("#register-button").addClass("hidden");
+    }
+    else {
+        //hide logout button
+        $("#logout-button").addClass("hidden");
+        //add login/logout buttons
+        $("#login-button").removeClass("hidden");
+        $("#register-button").removeClass("hidden");
+    }
 }

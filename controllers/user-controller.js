@@ -5,12 +5,16 @@ module.exports = function (db) {
 
         var canLogin = false;
 
-        if (db.get("users").find({username: username, passHash: passHash})) {
+        var allUsersObjects = db.get("users").value();
+
+        if (allUsersObjects.find(u => u.username === username && u.passHash === passHash)) {
             canLogin =  true;
         }
 
         if (canLogin) {
-            var authKey = db.get("users").find({username: username}).authKey;
+            var currentUser = allUsersObjects
+                .find(u => u.username === username && u.passHash === passHash);
+            var authKey = currentUser.authKey;
             response.json({
                 result: {
                     username: username,

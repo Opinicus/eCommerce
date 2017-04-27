@@ -21,7 +21,7 @@ export function post(url, body, headers = {}) {
 }
 
 export function put(url, body, headers = {}) {
-    return request(url, 'PUT', JSON.stringify(body), header);
+    return request(url, 'PUT', JSON.stringify(body), headers);
 }
 
 //if it fails, remove all headers
