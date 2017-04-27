@@ -17,8 +17,10 @@ SystemJS.config({
   'loginRegisterRequest': 'scripts/login-register-request.js',
 
   //Library files
+  
   'handlebars': 'bower_components/handlebars/handlebars.js',
   'jquery' : 'bower_components/jquery/dist/jquery.js',
+  'bootstrap' : 'bower_components/bootstrap/dist/js/bootstrap.js',
   'navigo' : 'bower_components/navigo/lib/navigo.js',
   'cryptojs': 'bower_components/crypto-js/crypto-js.js',
   'toastr' : 'bower_components/toastr/toastr.js'

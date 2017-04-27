@@ -16,6 +16,11 @@ main{
     overflow: auto;
 }
 
+.img-responsive {
+    width: 100px;
+    height: 100px;
+}
+
 .navbar{
     border-radius: 0px;
 }
