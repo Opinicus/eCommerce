@@ -30,7 +30,7 @@ $("#logout-button").on("click", logout);
 
 var router = new Navigo(null, true);
 router.on("/home", () => {
-
+    loadTemplate("home", "/api/products", "main")
 });
 router.on("/products", () => {
     loadTemplate("product", "/api/products", "main");
@@ -40,7 +40,7 @@ router.on("/contact", () => {
 });
 
 //rework may be needed
-if (window.location.href === "http://localhost:3000/") {
+if (window.location.href === "http://localhost:3000/" || window.location.hash === "") {
     router.navigate("/home");
 }
 
