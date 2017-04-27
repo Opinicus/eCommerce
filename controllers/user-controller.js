@@ -55,7 +55,7 @@ module.exports = function (db) {
             var User = require("../classes/user-class");
             var registeredUser = new User(username, passHash, authKey);
 
-            db.get("users").push({ username: username, passHash: passHash, authKey: authKey}).write();
+            db.get("users").push(registeredUser).write();
             response.status(201).json({user: registeredUser});
         }
         else {

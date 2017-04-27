@@ -39,4 +39,9 @@ router.on("/contact", () => {
     loadTemplate("contact", "", "main");
 });
 
+//rework may be needed
+if (window.location.href === "http://localhost:3000/") {
+    router.navigate("/home");
+}
+
 
