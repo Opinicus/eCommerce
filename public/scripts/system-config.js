@@ -15,6 +15,7 @@ SystemJS.config({
   'loadTemplate': 'scripts/load-template.js',
   'loginRegisterPopUp': 'scripts/login-register-popup.js',
   'loginRegisterRequest': 'scripts/login-register-request.js',
+  'checkForAdmin': 'scripts/check-for-admin.js',
 
   //Library files
   

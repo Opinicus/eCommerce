@@ -11,7 +11,8 @@ export function login() {
         .then(value => {
             //welcome msg here
 
-
+            //set account username label
+            $("#logged-user").text(value.result.username);
             //store authKey in localStorage
             window.localStorage.setItem("auth-key", value.result.authKey);
             //show logout button
@@ -45,11 +46,15 @@ export function register() {
 }
 
 export function logout() {
+    //empty the account username label
+    $("#logged-user").text("");
     //hide logout button
     $("#logout-button").addClass("hidden");
     //add login/logout buttons
     $("#login-button").removeClass("hidden");
     $("#register-button").removeClass("hidden");
+    //hide add-product-button
+    $("#add-product-button").addClass("hidden");
     //delete authKey from localStorage
     window.localStorage.removeItem("auth-key");
 }
