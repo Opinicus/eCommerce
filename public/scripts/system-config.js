@@ -14,6 +14,7 @@ SystemJS.config({
   'requester': 'scripts/requester.js',
   'loadTemplate': 'scripts/load-template.js',
   'loginRegisterPopUp': 'scripts/login-register-popup.js',
+  'showCartProductsPopUp': 'scripts/show-cart-products-popup.js',
   'loginRegisterRequest': 'scripts/login-register-request.js',
   'checkForAdmin': 'scripts/check-for-admin.js',
 
