@@ -1,7 +1,7 @@
 <div class="product-form-container center-block">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">{{Add/Edit/Show}}</h3>
+            <h3 class="panel-title">Add/Edit/Show</h3>
         </div>
         <div class="center-block">
             <div class="form-group">
@@ -14,7 +14,7 @@
                     </span>
                     <input type="text" class="form-control" readonly>
                 </div>
-                <img id='img-upload' class="img-thumbnail" />
+                <img id='img-upload' class="img-thumbnail" src="{{this.img}}"/>
             </div>
 
             <div class="form-group">
@@ -33,9 +33,9 @@
         </div>
 
         <div class="form-group">
-            <label>Desciption</label>
-            <textarea id="productDescription" class="form-control" rows="3">{{desciption}}</textarea>
+            <label>Description</label>
+            <textarea id="productDescription" class="form-control" rows="3">{{this.description}}</textarea>
         </div>
-        <button class="btn btn-default center-block" type="submit">{{submit}}</button>
+        <button class="btn btn-default center-block" type="submit">submit</button>
     </div>
 </div>

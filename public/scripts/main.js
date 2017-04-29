@@ -48,6 +48,10 @@ router.on("/products", () => {
 router.on("/contact", () => {
     loadTemplate("contact", "", "main");
 });
+// TODO: api/product data
+router.on("/addProduct", () => {
+    loadTemplate("product-form", "", "main");
+});
 
 //rework might be needed
 $(window).on("hashchange", () => {
