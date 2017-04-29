@@ -25,6 +25,7 @@ app.use(bodyParser.json());
 //Product controller
 var productController = require("./controllers/product-controller")(db);
 app.get("/api/products", productController.get);
+app.get("/api/products/latest", productController.getLatest);
 app.post("/api/products", productController.post);
 
 //User controller

@@ -35,7 +35,7 @@ $("#logout-button").on("click", logout);
 
 var router = new Navigo(null, true);
 router.on("/home", () => {
-    loadTemplate("home", "/api/products", "main");
+    loadTemplate("home", "/api/products/latest", "main");
 });
 router.on("/products", () => {
     loadTemplate("product", "/api/products", "main");
@@ -46,9 +46,16 @@ router.on("/contact", () => {
 
 //rework might be needed
 $(window).on("hashchange", () => {
-    if (window.location.href === "http://localhost:3000/" || window.location.hash === "" || window.location.hash === "/") {
+    if (window.location.href === "http://localhost:3000" || window.location.hash === "" || window.location.hash === "/") {
         router.navigate("/home");
-        loadTemplate("home", "/api/products", "main");
+        loadTemplate("home", "/api/products/latest", "main");
+    }
+});
+//rework might be needed
+$(window).on("load", () => {
+    if (window.location.href === "http://localhost:3000" || window.location.hash === "" || window.location.hash === "/") {
+        router.navigate("/home");
+        loadTemplate("home", "/api/products/latest", "main");
     }
 });
 

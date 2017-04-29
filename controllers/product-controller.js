@@ -31,8 +31,20 @@ module.exports = function(db) {
         db.get("products").push(postedProduct).write();
     }
 
+    function getLatest(request, response) {
+        var products = db.get("products").value();
+        var len = products.length;
+        var latest = products.slice(len - 3, len);
+
+        response.status(200);
+        response.json({
+            products: latest
+        });
+    }
+
     return {
         get: get,
-        post: post
+        post: post,
+        getLatest: getLatest
     };
 };
