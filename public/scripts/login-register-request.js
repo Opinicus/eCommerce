@@ -1,5 +1,6 @@
 import { put as putRequest } from "requester";
 import { post as postRequest } from "requester";
+import { get as getRequest } from "requester";
 
 export function login() {
     var $username = $("#username-field").val();
@@ -60,7 +61,17 @@ export function logout() {
 }
 
 export function checkForLogged() {
-    if (window.localStorage.getItem("auth-key")) {
+    var currentAuthKey = window.localStorage.getItem("auth-key");
+    if (currentAuthKey) {
+        getRequest("/api/users")
+            .then(value => {
+                var users = value.result.users;
+                var currentLoggedInUser = users.find(u => u.authKey === currentAuthKey);
+                //set account username label
+                $("#logged-user").text(currentLoggedInUser.username);
+            });
+
+
         //show logout button
         $("#logout-button").removeClass("hidden");
         //remove login/register buttons

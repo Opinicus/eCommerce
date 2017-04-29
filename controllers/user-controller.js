@@ -65,8 +65,18 @@ module.exports = function (db) {
         }
     }
 
+    function get(request, response) {
+        var allUsersObjects = db.get("users").value();
+        response.status(200).json({
+            result: {
+                users: allUsersObjects
+            }
+        });
+    }
+
     return {
         put: put,
-        post: post
+        post: post,
+        get: get
     };
 };

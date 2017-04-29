@@ -31,6 +31,7 @@ app.post("/api/products", productController.post);
 var userController = require("./controllers/user-controller")(db);
 app.put("/api/users", userController.put);
 app.post("/api/users", userController.post);
+app.get("/api/users", userController.get);
 
 
 app.listen(port, (err) => {  

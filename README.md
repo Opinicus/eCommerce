@@ -18,5 +18,5 @@
     * Work on cart
 
 ## To Fix:
-    * Admin user added but a refresh is needed in order to show the add product button
+    * After refresh not loading home template
 
