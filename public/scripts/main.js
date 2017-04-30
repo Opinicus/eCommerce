@@ -5,8 +5,6 @@ import { get as getRequest } from "requester";
 import { loadTemplate } from "loadTemplate";
 import { showLoginPopUp } from 'loginRegisterPopUp';
 import { showRegisterPopUp } from 'loginRegisterPopUp';
-import { showCartProductsPopUp } from 'showCartProductsPopUp';
-import { hideCartPopUp } from 'showCartProductsPopUp';
 import { hidePopUp } from 'loginRegisterPopUp';
 import { login } from "loginRegisterRequest";
 import { register } from "loginRegisterRequest";
@@ -23,8 +21,6 @@ checkForAdmin();
 $("#login-button").on("click", showLoginPopUp);
 $("#register-button").on("click", showRegisterPopUp);
 $("#disabled-background").on("click", hidePopUp);
-$("#cart-button").on("click",showCartProductsPopUp);
-$("#disabled-background").on("click", hideCartPopUp);
 $("#submit-button").on("click", (ev) => {
     var $target = $(ev.target);
     if ($target.text() === "Login") {
@@ -52,6 +48,11 @@ router.on("/contact", () => {
 router.on("/addProduct", () => {
     loadTemplate("product-form", "", "main");
 });
+// TODO: api/shoppingCart data
+router.on("/shoppingCart", () => {
+    loadTemplate("shopping-cart", "", "main");
+});
+
 
 //rework might be needed
 $(window).on("hashchange", () => {

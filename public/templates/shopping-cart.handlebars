@@ -1,45 +1,43 @@
 <div class="cart-container center-block">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h1 class="panel-title text-center"> Products </h1>
-                </div>
-                <div class="panel-body center-block">
-                    <div class="list-group ">
-                        {{#each products}}
-                        <div class="list-group-item list-group-products">                          
-                                <div class="media col-xs-9">
-                                    <div class="media-left">
-                                        <a href="#">
-                                            <img class="media-object" src={{this.img}}>
-                                        </a>
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">{{this.title}}</h4>
-                                    </div>
-                                </div>
-                                <div class="col-xs-3">
-                                    <div class="text-right">
-                                        <span>{{this.price}}<span>
-                                        <button>Remove</button>
-                                    </div>
-                                </div>                            
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1 class="panel-title text-center"> Products </h1>
+        </div>
+        <div class="panel-body center-block">
+            <div class="list-group ">
+                {{#each products}}
+                <div class="list-group-item list-group-products">
+                    <div class="media col-xs-9">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src={{this.img}}>
+                            </a>
                         </div>
-                        {{#each}} 
-                    </div>                                     
-                </div>
-
-                    <div id="shopping-cart-footer" class="form-group row">
-                        <div class="col-xs-9">
-                            <div class="pull-left">
-                                <label>Total :</label>
-                                <span>{{amount}}</span>
-                                    </div>
-                                </div>
-                                <div class="col-xs-3">
-                                    <span class="pull-right">{{totalPrice}}</span>
-                                </div>
-                            </div>
-                            <button class="btn btn-default center-block" type="submit">Buy</button>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{this.title}}</h4>
                         </div>
                     </div>
+                    <div class="col-xs-3">
+                        <div class="text-right">
+                            <span>{{this.price}}<span>
+                                <button>Remove</button>
+                        </div>
+                    </div>                            
                 </div>
+                {{/each}} 
+            </div>                                     
+        </div>
+        <div id="shopping-cart-footer" class="form-group row">
+            <div class="col-xs-9">
+                <div class="pull-left">
+                    <label>Total :</label>
+                    <span>{{amount}}</span>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <span class="pull-right">{{totalPrice}}</span>
+            </div>
+        </div>
+        <button class="btn btn-default center-block" type="submit">Buy</button>
+    </div>
+</div>
