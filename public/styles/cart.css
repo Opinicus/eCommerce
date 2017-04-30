@@ -45,10 +45,28 @@
   cursor:pointer;
   color:#666;
 }
+
 .list-group{
+  overflow-y: scroll;
+  height:59%;
+  width:100%;
   padding: 30px 0px;
+
 }
 .media-object{
 width:50px;
 height:50px;
+}
+.cart-box ::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+.cart-box ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+.cart-box ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }

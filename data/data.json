@@ -14,6 +14,11 @@
       "username": "admin",
       "passHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
       "authKey": "&&*)$Z=Bv-k=NPxQhuSyeAKJtxkzOomp+^@wmtqwdxqP=Wr^SMrb(WwZKNSq"
+    },
+    {
+      "username": "Darin",
+      "passHash": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
+      "authKey": "bBNSjKlf@vb=-!Vadk@TsnRw)_hvFCbhOc(MbwVuAdHFKCsUaEBnkchr&zQ*"
     }
   ],
   "products": [
