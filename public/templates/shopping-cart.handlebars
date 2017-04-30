@@ -1,47 +1,45 @@
-<div class="cart-container hidden">
-        <div class="cart-box">
-            <h1> Products </h1>
-            <div class="list-group">
-                <div class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src={{"./images/opinicus-team-icon.jpg"}}>
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">{{Product 1}}</h4>
+<div class="cart-container center-block">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center"> Products </h1>
+                </div>
+                <div class="panel-body center-block">
+                    <div class="list-group ">
+                        {{#each products}}
+                        <div class="list-group-item list-group-products">                          
+                                <div class="media col-xs-9">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img class="media-object" src={{this.img}}>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">{{this.title}}</h4>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div class="text-right">
+                                        <span>{{this.price}}<span>
+                                        <button>Remove</button>
+                                    </div>
+                                </div>                            
+                        </div>
+                        {{#each}} 
+                    </div>                                     
+                </div>
+
+                    <div id="shopping-cart-footer" class="form-group row">
+                        <div class="col-xs-9">
+                            <div class="pull-left">
+                                <label>Total :</label>
+                                <span>{{amount}}</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span class="pull-right">{{totalPrice}}</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-default center-block" type="submit">Buy</button>
+                        </div>
                     </div>
                 </div>
-                <div class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src="./images/opinicus-team-icon.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Product 2</h4>
-                    </div>
-                </div>
-                <div class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src="./images/opinicus-team-icon.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Product 3</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-8 pull-left">
-                    <label>Total :</label>
-                    <span>{{amount}}</span>
-                </div>
-                <div class="col-xs-2">
-                    <span>{{totalPrice}}</span>
-                </div>
-            </div>
-            <button id="buyButton">Buy</button>
-        </div>
-    </div>

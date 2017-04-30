@@ -5,7 +5,7 @@ export function showCartProductsPopUp()
 
     $popup.removeClass("hidden");
     $background.removeClass("hidden");
-    
+ 
 }
 
 export function hideCartPopUp() {
