@@ -1,15 +1,15 @@
 <div class="product-form-container center-block">
-    <div class="panel panel-primary">
-        <div class="panel-heading">
+    <div class="panel panel-primary product-form-panel">
+        <div class="panel-heading product-form-panel-heading">
             <h3 class="panel-title">Add/Edit/Show</h3>
         </div>
         <div class="center-block">
-            <div class="form-group">
+            <div class="form-group product-form-group-body">
                 <label>Upload Image</label>
                 <div class="input-group">
                     <span class="input-group-btn">
                                     <span class="btn btn-default btn-file">
-                                        Browse… <input type="file" id="imgInput">
+                                        Browse… <input type="file" id="img-input">
                                     </span>
                     </span>
                     <input type="text" class="form-control" readonly>
@@ -17,22 +17,22 @@
                 <img id='img-upload' class="img-thumbnail" src="{{this.img}}"/>
             </div>
 
-            <div class="form-group">
+            <div class="form-group product-form-group-body">
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">Title</span>
-                    <input id="productTitle" type="text" class="form-control" aria-label="basic-addon1">
+                    <input id="productTitle" type="text" class="form-control" aria-label="basic-addon1" placeholder="{{this.title}}">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group product-form-group-body">
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon1">Price</span>
-                    <input id="productPrice" type="text" class="form-control" aria-label="basic-addon1">
+                    <input id="productPrice" type="text" class="form-control" aria-label="basic-addon1" placeholder="{{this.price}}">
                     <div class="input-group-addon">$</div>
                 </div>
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group product-form-group-body">
             <label>Description</label>
             <textarea id="productDescription" class="form-control" rows="3">{{this.description}}</textarea>
         </div>

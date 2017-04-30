@@ -1,13 +1,13 @@
 .product-form-container{
     max-width: 800px;
 }
-.panel-primary{
+.product-form-panel{
     padding-bottom: 15px; 
 }
-.panel-heading{
+.product-form-panel-heading{
     margin-bottom: 15px; 
 }
-.form-group{
+.product-form-group-body{
     padding-left: 25px;
     padding-right: 25px;
 }

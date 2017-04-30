@@ -100,7 +100,7 @@ $(document).ready( function() {
 		    }
 		}
 
-		$("#imgInput").change(function(){
+		$("#img-input").change(function(){
 		    readURL(this);
 		}); 	
 	});
