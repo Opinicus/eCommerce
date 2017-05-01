@@ -4,10 +4,9 @@
   "description": "SPA online shop",
   "main": "app.js",
   "scripts": {
-    "postinstall": "bower install",
     "start": "node app.js",
-    "test": "mocha ./tests/sample-test.js "
-    
+    "test": "mocha ./tests/sample-test.js",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -27,5 +26,9 @@
     "lowdb": "^0.16.2",
     "systemjs": "^0.20.12",
     "systemjs-plugin-babel": "0.0.21"
+  },
+  "resolution": {
+    "jquery": "~3.2.1"
   }
+
 }
