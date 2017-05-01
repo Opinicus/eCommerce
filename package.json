@@ -4,6 +4,7 @@
   "description": "SPA online shop",
   "main": "app.js",
   "scripts": {
+    "postinstall": "bower install",
     "start": "node app.js",
     "test": "mocha ./tests/sample-test.js "
     
