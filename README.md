@@ -1,14 +1,11 @@
 # eCommers
-    Live: https://opinicus-e-commerce.herokuapp.com/
-
 ##  Description:
     SPA online shop
 
-
 ## Run project:
     * npm install
-    * bower install
     * npm start
+    * Live: https://opinicus-e-commerce.herokuapp.com/
 
 ## TODO:
     * Finish cart class
