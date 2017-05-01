@@ -1,11 +1,11 @@
 const express = require('express');
 const lowdb = require("lowdb");
 const app = express();  
-const port = 3000;
 const bodyParser = require('body-parser');
 
 var db = lowdb("./data/data.json");
 
+app.set('port', (process.env.PORT || 3000));
 app.use(express.static('public'));
 app.use('/libs', express.static('node_modules'));
 app.use('/static', express.static('public'));
@@ -15,6 +15,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+app.get('/', function(request, response){
+  response.render('public/index.html')
+});
 // Remove later and add the normal home page
 // app.get('/', (request, response) => {  
 //   response.sendFile('index.html', {"root": "./public"});
@@ -35,9 +38,9 @@ app.post("/api/users", userController.post);
 app.get("/api/users", userController.get);
 
 
-app.listen(port, (err) => {  
+app.listen(app.get('port'), (err) => {  
   if (err) {
     return console.log('something bad happened', err);
   }
-  console.log('Server is running at http://localhost:' + port);
+  console.log('Server is running at http://localhost:' + app.get('port'));
 });
