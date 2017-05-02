@@ -52,10 +52,12 @@ module.exports = function (db) {
             var authKey = authKeyGenerator();
 
             //Instantiate cart class here
-            
+            var Cart = require("../classes/cart-class");
+            var currentCart = new Cart();
+
             //Instantiate user class here
             var User = require("../classes/user-class");
-            var registeredUser = new User(username, passHash, authKey);
+            var registeredUser = new User(username, passHash, authKey, currentCart);
 
             db.get("users").push(registeredUser).write();
             response.status(201).json({user: registeredUser});
