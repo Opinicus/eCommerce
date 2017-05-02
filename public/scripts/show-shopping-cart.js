@@ -1,5 +1,6 @@
 import { get as getRequest } from "requester";
 import { loadTemplateFromData } from "loadTemplate";
+import { SessionCart } from "sessionCartClass";
 
 export function showShoppingCart() {
     var loggedIn = false;
@@ -14,8 +15,11 @@ export function showShoppingCart() {
                 var users = value.result.users;
                 var currentUser = users.find(u => u.authKey === window.localStorage.getItem("auth-key"));
                 loadTemplateFromData("shopping-cart", currentUser.cart, "main");
-                console.log(currentUser.cart)
-                $("#total-price").text(currentUser.cart.getTotalPrice());
+
+                var sessionCart = new SessionCart(currentUser.cart.items);
+                setTimeout(() => {
+                    $("#total-price").text(sessionCart.getTotalPrice() + "$");
+                }, 50);
             });
     }
     else {

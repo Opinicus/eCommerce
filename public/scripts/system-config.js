@@ -18,6 +18,7 @@ SystemJS.config({
   'loginRegisterRequest': 'scripts/login-register-request.js',
   'checkForAdmin': 'scripts/check-for-admin.js',
   "showShoppingCart": "scripts/show-shopping-cart.js",
+  "sessionCartClass": "classes/session-cart-class.js",
 
   //Library files
   

@@ -8,7 +8,7 @@ var db = lowdb("./data/data.json");
 app.set('port', (process.env.PORT || 3000));
 app.use(express.static('public'));
 app.use('/libs', express.static('node_modules'));
-app.use('/static', express.static('public'));
+app.use('/classes', express.static('classes'));
 
 app.use(bodyParser.urlencoded({
   extended: true
