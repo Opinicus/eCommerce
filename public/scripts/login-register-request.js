@@ -11,7 +11,7 @@ export function login() {
     putRequest("/api/users", { username: $username, passHash: passHash })
         .then(value => {
             //welcome msg here
-
+            toastr.success("Welcome, " + value.result.username);
             //set account username label
             $("#logged-user").text(value.result.username);
             //store authKey in localStorage
@@ -26,7 +26,7 @@ export function login() {
             $("#disabled-background").addClass("hidden");
         }, value => {
             //error msg here
-
+            toastr.error("Username or password is incorrect");
         });
 }
 
@@ -38,11 +38,14 @@ export function register() {
 
     postRequest("/api/users", { username: $username, passHash: passHash })
         .then(value => {
+            //success msg
+            toastr.success("Successfully registered");
             //hide popup and disabled-background
             $(".inner-container").addClass("hidden");
             $("#disabled-background").addClass("hidden");
         }, value => {
             //error msg here
+            toastr.error("Username is taken or too small");
         });
 }
 

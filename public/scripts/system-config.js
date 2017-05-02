@@ -17,6 +17,7 @@ SystemJS.config({
   'showCartProductsPopUp': 'scripts/show-cart-products-popup.js',
   'loginRegisterRequest': 'scripts/login-register-request.js',
   'checkForAdmin': 'scripts/check-for-admin.js',
+  "showShoppingCart": "scripts/show-shopping-cart.js",
 
   //Library files
   
