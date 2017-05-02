@@ -11,6 +11,7 @@ import { register } from "loginRegisterRequest";
 import { logout } from "loginRegisterRequest";
 import { checkForLogged } from "loginRegisterRequest";
 import { checkForAdmin } from 'checkForAdmin';
+import { showShoppingCart } from "showShoppingCart";
 
 
 var router = new Navigo(null, true);
@@ -29,7 +30,7 @@ router.on("/addProduct", () => {
 });
 // TODO: api/shoppingCart data
 router.on("/shoppingCart", () => {
-    loadTemplate("shopping-cart", "", "main");
+    showShoppingCart();
 });
 
 //Check if user is logged in

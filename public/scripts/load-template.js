@@ -19,3 +19,17 @@ export function loadTemplate(templateName, dataUrl, selector) {
             $element.html(compiledTemplate(data));
         });
 }
+
+export function loadTemplateFromData(templateName, data, selector) {
+    var template;
+    var compiledTemplate;
+    var $element;
+    getRequest(`/templates/${templateName}.handlebars`)
+        .then(value => {
+            template = value;
+            compiledTemplate = Handlebars.compile(template);
+
+            $element = $(selector);
+            $element.html(compiledTemplate(data));
+        });
+}

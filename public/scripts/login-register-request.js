@@ -12,6 +12,8 @@ export function login() {
         .then(value => {
             //welcome msg here
             toastr.success("Welcome, " + value.result.username);
+            //go to home page
+            window.location.hash = "/home";
             //set account username label
             $("#logged-user").text(value.result.username);
             //store authKey in localStorage

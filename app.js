@@ -31,7 +31,6 @@ app.put("/api/users", userController.put);
 app.post("/api/users", userController.post);
 app.get("/api/users", userController.get);
 
-
 app.listen(app.get('port'), (err) => {  
   if (err) {
     return console.log('something bad happened', err);
