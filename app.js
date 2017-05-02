@@ -18,12 +18,6 @@ app.use(bodyParser.json());
 app.get('/', function(request, response){
   response.render('public/index.html')
 });
-// Remove later and add the normal home page
-// app.get('/', (request, response) => {  
-//   response.sendFile('index.html', {"root": "./public"});
-// });
-
-
 
 //Product controller
 var productController = require("./controllers/product-controller")(db);
