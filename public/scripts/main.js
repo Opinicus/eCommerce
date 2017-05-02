@@ -13,6 +13,25 @@ import { checkForLogged } from "loginRegisterRequest";
 import { checkForAdmin } from 'checkForAdmin';
 
 
+var router = new Navigo(null, true);
+router.on("/home", () => {
+    loadTemplate("home", "/api/products/latest", "main");
+});
+router.on("/products", () => {
+    loadTemplate("product", "/api/products", "main");
+});
+router.on("/contact", () => {
+    loadTemplate("contact", "", "main");
+});
+// TODO: api/product data
+router.on("/addProduct", () => {
+    loadTemplate("product-form", "", "main");
+});
+// TODO: api/shoppingCart data
+router.on("/shoppingCart", () => {
+    loadTemplate("shopping-cart", "", "main");
+});
+
 //Check if user is logged in
 checkForLogged();
 //Check if admin is logged in
@@ -32,25 +51,9 @@ $("#submit-button").on("click", (ev) => {
         register();
     }
 });
-$("#logout-button").on("click", logout);
-
-var router = new Navigo(null, true);
-router.on("/home", () => {
-    loadTemplate("home", "/api/products/latest", "main");
-});
-router.on("/products", () => {
-    loadTemplate("product", "/api/products", "main");
-});
-router.on("/contact", () => {
-    loadTemplate("contact", "", "main");
-});
-// TODO: api/product data
-router.on("/addProduct", () => {
-    loadTemplate("product-form", "", "main");
-});
-// TODO: api/shoppingCart data
-router.on("/shoppingCart", () => {
-    loadTemplate("shopping-cart", "", "main");
+$("#logout-button").on("click", () => {
+	logout();
+	router.navigate("/home");
 });
 
 
