@@ -10,6 +10,7 @@
 ## TODO:
     * Fully test cart and access it properly
     * Unit tests
+    * Filter products
 
 ## To Fix:
     * After refresh not loading home template
