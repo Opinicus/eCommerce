@@ -69,6 +69,13 @@ $(window).on("load", () => {
     }
 });
 
+//rework might be needed
+$(window).on("ready", () => {
+	var hash = window.location.hash;
+	console.log(hash)
+    
+});
+
 //code for product form image
 $(document).ready( function() {
     	$(document).on('change', '.btn-file :file', function() {

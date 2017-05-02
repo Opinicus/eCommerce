@@ -3,6 +3,8 @@ var expect = chai.expect;
 var mocha = require('..\\node_modules\\mocha\\mocha.js');
 
 
+//import { login } from "loginRegisterRequest";
+
 function login() {
     var $username = $("#username-field").val();
     var $password = $("#password-field").val();
