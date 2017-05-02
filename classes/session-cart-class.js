@@ -1,6 +1,4 @@
-var Product = require("./product-class");
-
-module.exports = class Cart {
+export class SessionCart {
     constructor(products) {
         this.items = products || [];
         this.numberOfItems = this.items.length || 0;
@@ -41,5 +39,3 @@ module.exports = class Cart {
         return sum;
     }
 }
-
-// NOT FINISHED
