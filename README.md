@@ -8,7 +8,7 @@
     * Live: https://opinicus-e-commerce.herokuapp.com/
 
 ## TODO:
-    * Fully test cart and access it properly
+    * Find out a way to add images to products and add categories
     * Unit tests
     * Filter products
 

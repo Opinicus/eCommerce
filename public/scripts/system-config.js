@@ -19,6 +19,7 @@ SystemJS.config({
   'checkForAdmin': 'scripts/check-for-admin.js',
   "showShoppingCart": "scripts/show-shopping-cart.js",
   "sessionCartClass": "classes/session-cart-class.js",
+  'addToCart': 'scripts/add-to-cart.js',
 
   //Library files
   

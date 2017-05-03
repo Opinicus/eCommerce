@@ -50,6 +50,30 @@
             "description": "epic bag",
             "category": "awesome",
             "date": "dnes"
+          },
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
+          },
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
+          },
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
           }
         ],
         "numberOfItems": 2
@@ -70,12 +94,40 @@
             "date": "dnes"
           },
           {
-            "title": "bag",
-            "price": 10,
-            "img": "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-            "description": "epic bag",
-            "category": "awesome",
-            "date": "dnes"
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          },
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          },
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
           }
         ],
         "numberOfItems": 0
@@ -115,6 +167,60 @@
       "cart": {
         "items": [],
         "numberOfItems": 0
+      }
+    },
+    {
+      "username": "sun",
+      "passHash": "27756f050e14a1cb1c1ee867f0eace9ea4d9fcb81b8bee089469f1ebd5fd7b17",
+      "authKey": "dOJ@yYsTxX$Pn%=_GLz&h=EEtOjATqr+fDYMFLjECI+yfKFOw_Xo!YMRfMK%",
+      "cart": {
+        "items": [],
+        "numberOfItems": 0
+      }
+    },
+    {
+      "username": "shop",
+      "passHash": "8d9001d32c6a703d95921a77115050f33dd823d3f1730bd35215dcbecad6dc20",
+      "authKey": "NWTRssDxY_qrDpZvnB_eGWVfmlXzawWE+Cgu=KKbBvVVM-AUqGn%gdmC+=tu",
+      "cart": {
+        "items": [
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          },
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          }
+        ]
       }
     }
   ],

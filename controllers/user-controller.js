@@ -76,9 +76,52 @@ module.exports = function (db) {
         });
     }
 
+    function postInCart(request, response) {
+        var productToAdd = request.body.product;
+
+
+
+        var items = db.get("users")
+            .filter({"authKey": request.body.authKey})
+            .map("cart")
+            .map("items")
+            .value();
+
+        items = items[0];
+        
+        items.push(productToAdd);
+
+        var cart = {
+            "items": items,
+            "numbersOfItems": items.length 
+        };
+        
+        // console.log(cart);
+
+        // db.get("users")
+        //     .filter({"authKey": request.body.authKey})
+        //     .set("cart", cart)
+        //     .write();
+
+
+
+        db.get("users")
+            .filter({"authKey": request.body.authKey})
+            .map("cart")
+            .map("items")
+            .push(productToAdd)
+            .write();
+
+        // db.get("users")
+        //     .filter({"authKey": request.body.authKey})
+        //     .set("cart", cart)
+        //     .write();
+    }
+
     return {
         put: put,
         post: post,
-        get: get
+        get: get,
+        postInCart: postInCart
     };
 };
