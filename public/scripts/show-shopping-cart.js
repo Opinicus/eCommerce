@@ -22,8 +22,14 @@ export function showShoppingCart() {
                     $("#total-price").text(sessionCart.getTotalPrice() + "$");
                     $(".remove-button").on("click", (ev) => {
                         var $target = $(ev.target);
+                        var $productContainer = $target.parent().parent().parent();
+                        var index = $productContainer.index();
 
-                        removeFromCart(/*samo arguement*/);
+                        removeFromCart(index);
+
+                        //load cart with the removed item
+                        $productContainer.remove();
+                        $("#total-price").text(sessionCart.getTotalPrice() + "$");  
                     });
                 }, 50);
             });
