@@ -219,6 +219,18 @@
             "price": 100,
             "img": "neshto",
             "description": "neshto2"
+          },
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
           }
         ]
       }

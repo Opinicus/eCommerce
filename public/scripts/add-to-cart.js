@@ -27,6 +27,6 @@ export function addToCart(parent) {
             return postRequest("/api/users/cart", options);
         })
         .then(value => {
-            console.log(value);
+            //maybe some msg here
         });
 }

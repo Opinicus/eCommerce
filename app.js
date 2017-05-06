@@ -31,6 +31,7 @@ app.put("/api/users", userController.put);
 app.post("/api/users", userController.post);
 app.get("/api/users", userController.get);
 app.post("/api/users/cart", userController.postInCart);
+app.del("/api/users/cart", userController.removeFromCart);
 
 app.listen(app.get('port'), (err) => {  
   if (err) {

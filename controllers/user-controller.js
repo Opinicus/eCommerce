@@ -118,10 +118,22 @@ module.exports = function (db) {
         //     .write();
     }
 
+    function removeFromCart(request, response) {
+        var allUsersObjects = db.get("users").value();
+        
+        db.get("users")
+            .filter({"authKey": request.body.authKey})
+            .map("cart")
+            .map("items")
+            .remove();
+
+    }
+
     return {
         put: put,
         post: post,
         get: get,
-        postInCart: postInCart
+        postInCart: postInCart,
+        removeFromCart: removeFromCart
     };
 };
