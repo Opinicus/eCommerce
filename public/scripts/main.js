@@ -92,6 +92,10 @@ $("#logout-button").on("click", () => {
 	router.navigate("/home");
 });
 
+$("#twitter-share-button").on("click", () => {
+	window.open("https://twitter.com/intent/tweet?text=Awesome%20shop%20for%20spaceships", "Tweet", "height=400,width=700");
+});
+
 //rework might be needed
 $(window).on("hashchange", () => {
 	var hash = window.location.hash;
