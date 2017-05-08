@@ -1,6 +1,7 @@
 import { get as getRequest } from "requester";
 import { loadTemplateFromData } from "loadTemplate";
 import { SessionCart } from "sessionCartClass";
+import { removeFromCart } from 'removeFromCart';
 
 export function showShoppingCart() {
     var loggedIn = false;
@@ -19,6 +20,18 @@ export function showShoppingCart() {
                 var sessionCart = new SessionCart(currentUser.cart.items);
                 setTimeout(() => {
                     $("#total-price").text(sessionCart.getTotalPrice() + "$");
+                    $(".remove-button").on("click", (ev) => {
+                        var $target = $(ev.target);
+                        var $productContainer = $target.parent().parent().parent();
+                        var index = $productContainer.index();
+
+                        removeFromCart(index);
+
+                        //load cart with the removed item
+                        $productContainer.remove();
+                        sessionCart.remove(index);
+                        $("#total-price").text(sessionCart.getTotalPrice() + "$");
+                    });
                 }, 50);
             });
     }

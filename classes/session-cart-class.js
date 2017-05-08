@@ -1,7 +1,6 @@
 export class SessionCart {
     constructor(products) {
         this.items = products || [];
-        this.numberOfItems = this.items.length || 0;
     }
 
     add(item) {
@@ -29,6 +28,11 @@ export class SessionCart {
 
             return this;
         }
+        else if (typeof item === "number") {
+            this.items.splice(index, 1);
+
+            return this;
+        }
     }
 
     getTotalPrice() {
@@ -37,5 +41,9 @@ export class SessionCart {
             sum += item.price;
         });
         return sum;
+    }
+
+    getItemCount() {
+        return this.items.length;
     }
 }

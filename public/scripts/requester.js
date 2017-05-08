@@ -24,4 +24,8 @@ export function put(url, body, headers = {}) {
     return request(url, 'PUT', JSON.stringify(body), headers);
 }
 
+export function del(url, body, headers = {}) {
+    return request(url, "DELETE", JSON.stringify(body), headers);
+}
+
 //if it fails, remove all headers

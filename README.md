@@ -5,7 +5,7 @@
 ## Run project:
     * npm install
     * npm start
-    * Live: https://opinicus-e-commerce.herokuapp.com/
+    * Live: https://opinicus-e-commerce-eu.herokuapp.com/
 
 ## TODO:
     * Find out a way to add images to products and add categories
