@@ -7,6 +7,7 @@ const aws = require('aws-sdk');
 const S3_BUCKET = process.env.S3_BUCKET;
 
 var db = lowdb("./data/data.json");
+db._.mixin(require('underscore-db'));
 
 app.set('port', (process.env.PORT || 3000));
 app.use(express.static('public'));

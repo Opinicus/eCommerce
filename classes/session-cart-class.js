@@ -28,6 +28,11 @@ export class SessionCart {
 
             return this;
         }
+        else if (typeof item === "number") {
+            this.items.splice(index, 1);
+
+            return this;
+        }
     }
 
     getTotalPrice() {
