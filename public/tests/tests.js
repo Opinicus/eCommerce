@@ -1,3 +1,4 @@
+import { register } from 'loginRegisterRequest';
 describe("Data Layer Tests", () => {
   const LOCAL_STORAGE_USERNAME_KEY = 'signed-in-user-username',
     LOCAL_STORAGE_AUTHKEY_KEY = 'signed-in-user-auth-key';
@@ -16,7 +17,7 @@ describe("Data Layer Tests", () => {
    //const passHash = 'SOME_PASS_HASH';
 
     beforeEach(() => {
-      requesterPostStub = sinon.stub(functions, 'postRequest',);
+      requesterPostStub = sinon.stub(requester, 'postRequest',);
       cryptoJSStub = sinon.stub(CryptoJS, 'SHA256');
     });
     afterEach(() => {
@@ -36,7 +37,7 @@ describe("Data Layer Tests", () => {
       
      // requesterPostStub.returns(Promise.resolve(response));
 
-      functions.register()
+      register()
         .then(()=>{
           expect(requesterPostStub).to.have.been.calledOnce;
         })

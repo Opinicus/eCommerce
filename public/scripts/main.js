@@ -13,12 +13,7 @@ import { checkForLogged } from "loginRegisterRequest";
 import { checkForAdmin } from 'checkForAdmin';
 import { showShoppingCart } from "showShoppingCart";
 import { addToCart } from 'addToCart';
-<<<<<<< HEAD
-import { tests } from 'tests';
-=======
 import { showSelectedProductImage } from 'showSelectedProductImage';
->>>>>>> refs/remotes/origin/master
-
 
 var router = new Navigo(null, true);
 router.on("/home", () => {
