@@ -18,8 +18,8 @@
   <script src="../libs/sinon-chai/lib/sinon-chai.js"></script>
 
   <!-- Libs -->
-  <script src="../../libs/systemjs/dist/system.js"></script>
-  <script src="system-config-tests.js"></script>
+  <script src="/libs/systemjs/dist/system.js"></script> 
+  <script src="./system-config-tests.js"></script>
   <script src="../bower_components/jquery/dist/jquery.js"></script>
   <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../bower_components/toastr/toastr.js"></script>
@@ -34,11 +34,13 @@
     const { expect } = chai;
   </script>
 
-  <script>
+  <!--<script>
     mocha.run();
-  </script>
+  </script>-->
 
- <script src="tests.js"></script>
+  <script>
+    System.import('./tests.js').then(() => mocha.run());
+  </script>
 
 </body>
 

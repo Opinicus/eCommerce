@@ -23,7 +23,7 @@ SystemJS.config({
   'addToCart': '../scripts/add-to-cart.js',
   'removeFromCart': '../scripts/remove-from-cart.js',
   'showSelectedProductImage':'../scripts/show-selected-product-image.js',
-  'tests' : '/tests.js',
+  //'tests' : 'tests/tests.js',
 
   //Library files
   
