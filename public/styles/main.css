@@ -3,7 +3,6 @@ html{
     width: 100%;
     min-height: 100%;
 }
-
 body{
     margin-bottom: 70px;
 }
@@ -21,8 +20,8 @@ main{
 }
 
 .img-responsive {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .navbar{
@@ -77,4 +76,33 @@ main{
 
 .hidden {
     display: none;
+}
+
+
+@media (min-width: 1200px){
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .thumbnail{
+        zoom: 105%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .thumbnail{
+        zoom: 110%;
+    }
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .thumbnail{
+        zoom: 125%;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .thumbnail{
+        zoom: 135%;
+    }
 }

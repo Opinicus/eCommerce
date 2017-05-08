@@ -1,4 +1,22 @@
+.thumbnail{
+    max-width: 200px;
+}
+
 .product-price{
     padding-top: 0.8em;
-    padding-left: 0.5em; 
+}
+
+.panel-footer{
+    padding: 0px;
+    background-color: #ffffff;
+    border-top: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.add-to-cart-button{
+    border-radius: 0px;
+    background-color: #742ECC;  
+    color: #ffffff;
+    
 }
