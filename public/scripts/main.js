@@ -57,13 +57,25 @@ $("#register-button").on("click", showRegisterPopUp);
 $("#disabled-background").on("click", hidePopUp);
 $("#submit-button").on("click", (ev) => {
 	var $target = $(ev.target);
+	
+	var $username = $("#username-field").val();
+	var $password = $("#password-field").val();
+	var passHash = CryptoJS.SHA256($password);
+	passHash = passHash.toString();
+
+	var user = {
+		username: $username,
+		passHash: passHash
+	};
+
 	if ($target.text() === "Login") {
-		login();
+
+		login(user);
 		//Check for admin user logged in: REWORK WITH PROMISE
 		setTimeout(checkForAdmin, 50);
 	}
 	else if ($target.text() === "Register") {
-		register();
+		register(user);
 	}
 });
 $("#logout-button").on("click", () => {
@@ -75,7 +87,7 @@ $("#logout-button").on("click", () => {
 $(window).on("hashchange", () => {
 	var hash = window.location.hash;
 	hash = hash.substr(2);
-	
+
 	//use a switch here to switch templates and fix bug
 
 	if (window.location.href === "http://localhost:3000/" || window.location.hash === "/") {

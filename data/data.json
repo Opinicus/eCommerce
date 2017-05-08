@@ -192,6 +192,21 @@
           }
         ]
       }
+    },
+    {
+      "username": "test123",
+      "passHash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+      "authKey": ")xqFefGgokc*ZK+@HuZSDyzp)#=bw*fjKfDbhqw-hoFuwrFSZAhh-zY*H_wC",
+      "cart": {
+        "items": [
+          {
+            "title": "Product 1",
+            "price": 1000,
+            "img": "url",
+            "description": "Amazing! WOW!"
+          }
+        ]
+      }
     }
   ],
   "products": [

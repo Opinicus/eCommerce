@@ -2,13 +2,13 @@ import { put as putRequest } from "requester";
 import { post as postRequest } from "requester";
 import { get as getRequest } from "requester";
 
-export function login() {
-    var $username = $("#username-field").val();
-    var $password = $("#password-field").val();
-    var passHash = CryptoJS.SHA256($password);
-    passHash = passHash.toString();
+export function login(user) {
+    // var $username = $("#username-field").val();
+    // var $password = $("#password-field").val();
+    // var passHash = CryptoJS.SHA256($password);
+    // passHash = passHash.toString();
 
-    putRequest("/api/users", { username: $username, passHash: passHash })
+    putRequest("/api/users", { username: user.username, passHash: user.passHash })
         .then(value => {
             //welcome msg here
             toastr.success("Welcome, " + value.result.username);
@@ -32,13 +32,13 @@ export function login() {
         });
 }
 
-export function register() {
-    var $username = $("#username-field").val();
-    var $password = $("#password-field").val();
-    var passHash = CryptoJS.SHA256($password);
-    passHash = passHash.toString();
+export function register(user) {
+    // var $username = $("#username-field").val();
+    // var $password = $("#password-field").val();
+    // var passHash = CryptoJS.SHA256($password);
+    // passHash = passHash.toString();
 
-    postRequest("/api/users", { username: $username, passHash: passHash })
+    postRequest("/api/users", { username: user.username, passHash: user.passHash })
         .then(value => {
             //success msg
             toastr.success("Successfully registered");
