@@ -13,13 +13,13 @@
             {{#each products}}
             <div class="col-sm-4">
                 <div class="panel panel-primary">
-                    <div class="panel-heading">{{this.title}}</div>
+                    <div class="panel-heading product-title">{{this.title}}</div>
                     <div class="panel-body">
-                        <img src="{{this.url}}" class="img-responsive" alt="Image">
+                        <img src="{{this.img}}" class="img-responsive" id="img-upload" alt="Image">
                     </div>
                     <div class="panel-footer">
-                        <strong class="product-price pull-left">Price: {{this.price}} $</strong>
-                        <div class="btn btn-warning pull-right">Add to cart</div>
+                        <strong class="product-price pull-left product-price" id="productPrice">Price: {{this.price}} $</strong>
+                        <div class="btn btn-warning pull-right add-to-cart-button">Add to cart</div>
                         <div class="clearfix"></div>
                     </div>
                 </div>
