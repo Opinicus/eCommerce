@@ -1,7 +1,6 @@
 export class SessionCart {
     constructor(products) {
         this.items = products || [];
-        this.numberOfItems = this.items.length || 0;
     }
 
     add(item) {
@@ -37,5 +36,9 @@ export class SessionCart {
             sum += item.price;
         });
         return sum;
+    }
+
+    getItemCount() {
+        return this.items.length;
     }
 }

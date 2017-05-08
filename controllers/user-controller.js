@@ -8,7 +8,7 @@ module.exports = function (db) {
         var allUsersObjects = db.get("users").value();
 
         if (allUsersObjects.find(u => u.username === username && u.passHash === passHash)) {
-            canLogin =  true;
+            canLogin = true;
         }
 
         if (canLogin) {
@@ -30,7 +30,7 @@ module.exports = function (db) {
     function post(request, response) {
         var username = request.body.username;
         var passHash = request.body.passHash;
-        
+
         var HASHED_EMPTY_PASSWORD = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
 
         var canRegister = true;
@@ -43,7 +43,7 @@ module.exports = function (db) {
 
         //check for empty username(empty password works)
         if (username === "" || passHash === HASHED_EMPTY_PASSWORD) {
-            canRegister =  false;
+            canRegister = false;
         }
 
         if (canRegister) {
@@ -60,7 +60,7 @@ module.exports = function (db) {
             var registeredUser = new User(username, passHash, authKey, currentCart);
 
             db.get("users").push(registeredUser).write();
-            response.status(201).json({user: registeredUser});
+            response.status(201).json({ user: registeredUser });
         }
         else {
             response.status(400).json("Username is already taken");
@@ -82,20 +82,20 @@ module.exports = function (db) {
 
 
         var items = db.get("users")
-            .filter({"authKey": request.body.authKey})
+            .filter({ "authKey": request.body.authKey })
             .map("cart")
             .map("items")
             .value();
 
         items = items[0];
-        
+
         items.push(productToAdd);
 
         var cart = {
             "items": items,
-            "numbersOfItems": items.length 
+            "numbersOfItems": items.length
         };
-        
+
         // console.log(cart);
 
         // db.get("users")
@@ -106,7 +106,7 @@ module.exports = function (db) {
 
 
         db.get("users")
-            .filter({"authKey": request.body.authKey})
+            .filter({ "authKey": request.body.authKey })
             .map("cart")
             .map("items")
             .push(productToAdd)
@@ -118,10 +118,49 @@ module.exports = function (db) {
         //     .write();
     }
 
+    function removeFromCart(request, response) {
+        var allUsersObjects = db.get("users").value();
+        var currentUser = allUsersObjects.find(u => u.authKey === request.body.authKey);
+
+        var index = request.body.index;
+
+        var items = db.get("users")
+            .filter({ "authKey": request.body.authKey })
+            .map("cart")
+            .map("items")
+            .value();
+
+        items.splice(index, 1);
+
+        var cart = {
+            "items": items,
+            "numbersOfItems": items.length
+        };
+
+        // db.get("users")
+        //     .assign({ items: items })
+        //     .write();
+
+
+        // var fs = require("fs");
+        // fs.writeFileSync("../data.json", JSON.stringify(currentUser.cart.items));
+
+        // db.get("users")
+        //     .filter({"authKey": request.body.authKey})
+        //     .set("cart", cart)
+        //     .value();
+
+        db.get("users")
+            .find({"authKey": request.body.authKey})
+            .assign("cart", cart)
+            .write();
+    }
+
     return {
         put: put,
         post: post,
         get: get,
-        postInCart: postInCart
+        postInCart: postInCart,
+        removeFromCart: removeFromCart
     };
 };

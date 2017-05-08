@@ -18,8 +18,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+
+
 app.get('/', function(request, response){
-  response.render('public/index.html')
+  response.render('public/index.html');
 });
 
 //Product controller
@@ -34,6 +36,7 @@ app.put("/api/users", userController.put);
 app.post("/api/users", userController.post);
 app.get("/api/users", userController.get);
 app.post("/api/users/cart", userController.postInCart);
+app.delete("/api/users/cart", userController.removeFromCart);
 
 
 // FIX: missing credentions
