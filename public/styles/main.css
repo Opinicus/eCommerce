@@ -9,7 +9,11 @@ body{
 }
 
 header{
-    background-color: orange;
+    background-color: #01c1a4;
+}
+header h1 {
+    color: #742ECC;
+    font-size: 64px;
 }
 
 main{
@@ -27,7 +31,7 @@ main{
 
 .footer{
     padding-top: 1.5em;
-    background-color: orange;
+    background-color: #01c1a4;
     position: absolute;
     left: 0;
     bottom: 0;
