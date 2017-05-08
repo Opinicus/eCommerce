@@ -21,6 +21,8 @@ SystemJS.config({
   "sessionCartClass": "classes/session-cart-class.js",
   'addToCart': 'scripts/add-to-cart.js',
   'removeFromCart': 'scripts/remove-from-cart.js',
+  
+  'showSelectedProductImage': 'scripts/show-selected-product-image.js',
 
   //Library files
   

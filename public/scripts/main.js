@@ -13,6 +13,7 @@ import { checkForLogged } from "loginRegisterRequest";
 import { checkForAdmin } from 'checkForAdmin';
 import { showShoppingCart } from "showShoppingCart";
 import { addToCart } from 'addToCart';
+import { showSelectedProductImage } from 'showSelectedProductImage';
 
 
 var router = new Navigo(null, true);
@@ -36,6 +37,10 @@ router.on("/contact", () => {
 // TODO: api/product data
 router.on("/addProduct", () => {
 	loadTemplate("product-form", "", "main");
+
+	setTimeout(() => {
+		showSelectedProductImage();
+	}, 50)
 });
 // TODO: api/shoppingCart data
 router.on("/shoppingCart", () => {
@@ -66,7 +71,6 @@ $("#logout-button").on("click", () => {
 	router.navigate("/home");
 });
 
-
 //rework might be needed
 $(window).on("hashchange", () => {
 	var hash = window.location.hash;
@@ -92,41 +96,4 @@ $(window).on("ready", () => {
 	var hash = window.location.hash;
 	console.log(hash)
 
-});
-
-//code for product form image
-$(document).ready(function () {
-	$(document).on('change', '.btn-file :file', function () {
-		var input = $(this),
-			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-		input.trigger('fileselect', [label]);
-	});
-
-	$('.btn-file :file').on('fileselect', function (event, label) {
-
-		var input = $(this).parents('.input-group').find(':text'),
-			log = label;
-
-		if (input.length) {
-			input.val(log);
-		} else {
-			if (log) alert(log);
-		}
-
-	});
-	function readURL(input) {
-		if (input.files && input.files[0]) {
-			var reader = new FileReader();
-
-			reader.onload = function (e) {
-				$('#img-upload').attr('src', e.target.result);
-			}
-
-			reader.readAsDataURL(input.files[0]);
-		}
-	}
-
-	$("#img-input").change(function () {
-		readURL(this);
-	});
 });
