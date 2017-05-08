@@ -20,6 +20,8 @@ SystemJS.config({
   "showShoppingCart": "scripts/show-shopping-cart.js",
   "sessionCartClass": "classes/session-cart-class.js",
   'addToCart': 'scripts/add-to-cart.js',
+  
+  'showSelectedProductImage': 'scripts/show-selected-product-image.js',
 
   //Library files
   
