@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 var db = lowdb("./data/data.json");
+db._.mixin(require('underscore-db'));
 
 app.set('port', (process.env.PORT || 3000));
 app.use(express.static('public'));

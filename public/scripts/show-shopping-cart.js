@@ -29,7 +29,8 @@ export function showShoppingCart() {
 
                         //load cart with the removed item
                         $productContainer.remove();
-                        $("#total-price").text(sessionCart.getTotalPrice() + "$");  
+                        sessionCart.remove(index);
+                        $("#total-price").text(sessionCart.getTotalPrice() + "$");
                     });
                 }, 50);
             });

@@ -137,23 +137,35 @@ module.exports = function (db) {
             "numbersOfItems": items.length
         };
 
+        var newArray = allUsersObjects.map(u => {
+            if (u.authKey === request.body.authKey) {
+                u.cart.items.splice(index, 1);
+                return u;
+            }
+            else {
+                return u;
+            }
+        });
+
         // db.get("users")
         //     .assign({ items: items })
         //     .write();
-
-
-        // var fs = require("fs");
-        // fs.writeFileSync("../data.json", JSON.stringify(currentUser.cart.items));
 
         // db.get("users")
         //     .filter({"authKey": request.body.authKey})
         //     .set("cart", cart)
         //     .value();
 
-        db.get("users")
-            .find({"authKey": request.body.authKey})
-            .assign("cart", cart)
-            .write();
+        // db.get("users")
+        //     .find({"authKey": request.body.authKey})
+        //     .assign("cart", cart)
+        //     .write();
+
+        // db.get("users")
+        //     .filter({ "authKey": request.body.authKey })
+        //     .updateWhere("cart", {cart: cart})
+
+        db.updateWhere(db.users, {users: allUsersObjects}, {users: newArray}).write();
     }
 
     return {
