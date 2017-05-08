@@ -36,7 +36,7 @@ router.on("/contact", () => {
 });
 // TODO: api/product data
 router.on("/addProduct", () => {
-	loadTemplate("product-form", "", "main");
+	loadTemplate("product-form-add-product", "", "main");
 
 	setTimeout(() => {
 		showSelectedProductImage();
