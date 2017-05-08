@@ -69,6 +69,11 @@ $("#logout-button").on("click", () => {
 
 //rework might be needed
 $(window).on("hashchange", () => {
+	var hash = window.location.hash;
+	hash = hash.substr(2);
+	
+	//use a switch here to switch templates and fix bug
+
 	if (window.location.href === "http://localhost:3000/" || window.location.hash === "/") {
 		router.navigate("/home");
 		loadTemplate("home", "/api/products/latest", "main");

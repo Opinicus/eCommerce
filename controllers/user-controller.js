@@ -120,6 +120,7 @@ module.exports = function (db) {
 
     function removeFromCart(request, response) {
         var allUsersObjects = db.get("users").value();
+        var currentUser = allUsersObjects.find(u => u.authKey === request.body.authKey);
 
         var index = request.body.index;
 
@@ -136,20 +137,23 @@ module.exports = function (db) {
             "numbersOfItems": items.length
         };
 
-        db.get("users")
-            .assign({ items: items })
-            .write();
+        // db.get("users")
+        //     .assign({ items: items })
+        //     .write();
+
+
+        // var fs = require("fs");
+        // fs.writeFileSync("../data.json", JSON.stringify(currentUser.cart.items));
 
         // db.get("users")
         //     .filter({"authKey": request.body.authKey})
         //     .set("cart", cart)
         //     .value();
 
-        // db.get("users")
-        //     .filter({"authKey": request.body.authKey})
-        //     .map("cart")
-        //     .assign("items", items)
-        //     .write();
+        db.get("users")
+            .find({"authKey": request.body.authKey})
+            .assign("cart", cart)
+            .write();
     }
 
     return {
