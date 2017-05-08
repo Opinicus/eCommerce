@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>e-commerce</title>
+  <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+  <link rel="stylesheet" href="../libs/mocha/mocha.css" />
+</head>
+
+<body>
+  <div id="mocha"></div>
+
+  <!-- Testing -->
+  <script src="../libs/mocha/mocha.js"></script>
+  <script src="../libs/chai/chai.js"></script>
+  <script src="../libs/sinon/pkg/sinon.js"></script>
+  <script src="../libs/sinon-chai/lib/sinon-chai.js"></script>
+
+  <!-- Libs -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../bower_components/toastr/toastr.js"></script>
+  <script src="../bower_components/handlebars/handlebars.js"></script>
+  <script src="../bower_components/navigo/lib/navigo.js"></script>
+  <script src="../bower_components/crypto-js/crypto-js.js"></script>
+  <scirpt src="../libs/requirejs/require.js"></script>
+
+
+  <!-- App Loaders -->
+  <script src="login-register-functions/functions.js"></script>
+
+  <!-- Unit atests -->
+  <script>
+    mocha.setup('bdd');
+    const { expect } = chai;
+  </script>
+
+  <script src="tests.js"></script>
+
+  <script>
+    mocha.run();
+  </script>
+
+
+</body>
+
+</html>

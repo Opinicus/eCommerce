@@ -13,6 +13,7 @@ import { checkForLogged } from "loginRegisterRequest";
 import { checkForAdmin } from 'checkForAdmin';
 import { showShoppingCart } from "showShoppingCart";
 import { addToCart } from 'addToCart';
+import { tests } from 'tests';
 
 
 var router = new Navigo(null, true);
@@ -40,6 +41,9 @@ router.on("/addProduct", () => {
 // TODO: api/shoppingCart data
 router.on("/shoppingCart", () => {
 	showShoppingCart();
+});
+router.on("/mocha-tests",()=> {
+	loadTemplate("mocha-tests", "", "main");
 });
 
 //Check if user is logged in
