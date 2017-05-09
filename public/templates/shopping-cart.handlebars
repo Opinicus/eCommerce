@@ -1,12 +1,12 @@
 <div class="cart-container center-block">
-    <div class="panel panel-primary">
-        <div class="panel-heading">
+    <div id="shopping-cart-panel" class="panel panel-primary">
+        <div id="shopping-cart-heading" class="panel-heading ">
             <h1 class="panel-title text-center"> Products </h1>
         </div>
-        <div class="panel-body center-block">
+        <div class="panel-body shopping-cart center-block">
             <div class="list-group ">
                 {{#each items}}
-                <div class="list-group-item list-group-products">
+                <div id="shopping-cart-list-item" class="list-group-item list-group-products">
                     <div class="media col-xs-9">
                         <div class="media-left">
                             <a href="#">
@@ -38,6 +38,8 @@
                 <span class="pull-right" id="total-price"></span>
             </div>
         </div>
-        <button class="btn btn-default center-block" id="buy-button" type="submit">Buy</button>
+        <div class="row">
+            <button class="btn btn-default center-block" id="buy-button" type="submit">Purchase</button>
+        </div>
     </div>
 </div>

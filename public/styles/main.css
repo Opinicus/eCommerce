@@ -31,7 +31,7 @@ main{
 .panel-primary{
     border-color: black;
 }
-.panel-primary .panel-heading{
+#home-page-panel-heading {
     background-color: #742ECC;
     border-color: #742ECC;
     border-radius: 2px;
