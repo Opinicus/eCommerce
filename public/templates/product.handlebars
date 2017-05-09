@@ -5,10 +5,19 @@
             <img src="{{this.img}}" class="img-responsive" alt="Image">
             <div class="caption">
                 <h3>{{this.title}}</h3>
-                <div class="input-group input-group-xs">
-                    <input type="text" class="form-control" placeholder=" {{this.price}}$" disabled="disabled">
+                <div class="row">
+                    <div class="field-box">
+                        <span class="thumbnail-label">Price:</span>
+                        <span class="thumbnail-price">{{this.price}}$</span>
+                    </div>
                 </div>
-                <div class="panel-footer">
+                <div class="row">
+                    <div class="field-box">
+                        <span class="thumbnail-label">Added on:</span>
+                        <span class="thumbnail-date">{{this.date}}</span>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="btn btn-default add-to-cart-button">Add to cart</div>
                     <div class="clearfix"></div>
                 </div>
