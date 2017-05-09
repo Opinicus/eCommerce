@@ -6,7 +6,8 @@ module.exports = function (db) {
                     title: product.title,
                     price: product.price,
                     img: product.img,
-                    description: product.description
+                    description: product.description,
+                    date: product.date
                 };
             });
         response.status(200);

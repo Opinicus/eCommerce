@@ -1,33 +1,9 @@
 {
   "users": [
     {
-      "username": "pesho",
-      "passHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "authKey": "$fpiFl+U*J&V$z=Arx+bWH_MlW*DbPTN*qukS$Sn#qqNGXx%fLfp=#x!OWwM"
-    },
-    {
-      "username": "tosho",
-      "passHash": "3816a11c31d2747dbd20daee5937bc6425c109f5c49444131b7d5846d52c7ca8",
-      "authKey": "OD-AKn(+nxpuD=jz=HeJ_(mmxzukae#OOnUVYDFG%Dsw$ny$swYDV&*rSVlY"
-    },
-    {
       "username": "admin",
       "passHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
       "authKey": "&&*)$Z=Bv-k=NPxQhuSyeAKJtxkzOomp+^@wmtqwdxqP=Wr^SMrb(WwZKNSq"
-    },
-    {
-      "username": "Darin",
-      "passHash": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
-      "authKey": "bBNSjKlf@vb=-!Vadk@TsnRw)_hvFCbhOc(MbwVuAdHFKCsUaEBnkchr&zQ*"
-    },
-    {
-      "username": "test1",
-      "passHash": "1b4f0e9851971998e732078544c96b36c3d01cedf7caa332359d6f1d83567014",
-      "authKey": "nvFXeqsXPhTod@=u-lYQl!Hxmqqj%uE)DnVIiVohwrybRcW#w&cJYzRY*hO)",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
     },
     {
       "username": "gogo",
@@ -51,165 +27,11 @@
       }
     },
     {
-      "username": "petkan",
-      "passHash": "82bbd17ce08c932c83e13995ae7376a01c862188243da5176ba7b8e7658842db",
-      "authKey": "aubxTWUKpG+#+HzDR-bAUdZyFswvMTDPExYT@CVraK+WiP=ol@DhP+ydrLuz",
-      "cart": {
-        "items": [
-          {
-            "title": "bag",
-            "price": 10,
-            "img": "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-            "description": "epic bag",
-            "category": "awesome",
-            "date": "dnes"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          }
-        ],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "goshu",
-      "passHash": "0ecbee5b71c7bc2ca00c0474251c304bb669a46f87082c229f9e9c0091f01cf7",
-      "authKey": "nKD&hlCUT#E)WZEgZV-bsRigbbIuD&hOCB=lTreWVjRZsz@&__YsGFI*#baS",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "dawe",
-      "passHash": "876e93bac1ef22c5b9bd9ff6a775437a8a1965653bfa0ce6ae2c47cdf7cb2cb7",
-      "authKey": "WkJJpBqUBlBO*kFg(O#YXqKxoDns+#mefO&hLFgJpf&LbclN(kuTjEvbPy(P",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "newe",
-      "passHash": "686da06c55afa0859bc480f204c651c3f3d9b9a5fff4f7fee74837e3823470c4",
-      "authKey": "wG!J#LwujRqWacyZkWu)aBwO-qUnfpUNw!xwgQE*FgFIqz_Ecibjmy%A#=)U",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "dad",
-      "passHash": "6fe8ecbc1deafa51c2ecf088cf364eba1ceba9032ffbe2621e771b90ea93153d",
-      "authKey": "nir(dqIlB*t)DiKyqx)KHUBXgQKP!lZSkbaXz$n=hdt+N%^M-UKvIVnGERr#",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "sun",
-      "passHash": "27756f050e14a1cb1c1ee867f0eace9ea4d9fcb81b8bee089469f1ebd5fd7b17",
-      "authKey": "dOJ@yYsTxX$Pn%=_GLz&h=EEtOjATqr+fDYMFLjECI+yfKFOw_Xo!YMRfMK%",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
       "username": "shop",
       "passHash": "8d9001d32c6a703d95921a77115050f33dd823d3f1730bd35215dcbecad6dc20",
       "authKey": "NWTRssDxY_qrDpZvnB_eGWVfmlXzawWE+Cgu=KKbBvVVM-AUqGn%gdmC+=tu",
       "cart": {
-        "items": [
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "druga kotka",
-            "price": 1.99,
-            "img": "http://petvet.bg/uploads/articles/2011/11/994de3a3ee52d439b4b603e481085b6d.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          }
-        ]
+        "items": []
       }
     },
     {
@@ -219,23 +41,9 @@
       "cart": {
         "items": []
       }
-    },
-    {
-      "username": "let",
-      "passHash": "5654d4106d7025c2578858f4fc5ad235c25096b85c3b8d2fb8a064ae3546bb1d",
-      "authKey": "RpcitaCa$OkPed_#HVr=%mgwiYqo!@ybGCo-DLbZlGtL=c*rmXMngNU$mMCL",
-      "cart": {
-        "items": []
-      }
     }
   ],
   "products": [
-    {
-      "title": "kotka",
-      "price": 1,
-      "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-      "description": "kotka"
-    },
     {
       "title": "druga kotka",
       "price": 1.99,
