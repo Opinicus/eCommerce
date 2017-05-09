@@ -26,12 +26,6 @@ main{
     background-color: transparent !important;
 }
 
-
-.img-responsive {
-    width: 300px;
-    height: 300px;
-}
-
 .navbar{
     border-radius: 0px;
 }
@@ -92,10 +86,15 @@ main{
 
 
 @media (min-width: 1200px){
-
+    .col-lg-2{
+        width: 25%;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
+    .col-md-3{
+        width: 45%;
+    }
     .thumbnail{
         zoom: 105%;
     }

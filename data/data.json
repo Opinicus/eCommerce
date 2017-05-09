@@ -34,7 +34,14 @@
       "passHash": "16af0577252ea2fc2b73260d8fe6a4e73155e9f83bb234588b561ab01c9bca6b",
       "authKey": "d$pAbUTpg-Hqr_FPzfemOYaS@&oH#z!Pev&Dr@BI**MgVvPdKSyaakvNNPlO",
       "cart": {
-        "items": []
+        "items": [
+          {
+            "title": "pesho",
+            "price": 3,
+            "img": "http://static.baubau.bg/resources/kade-otiva-kotkata-kato-izchezne.jpg",
+            "description": "123"
+          }
+        ]
       }
     },
     {
