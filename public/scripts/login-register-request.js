@@ -8,7 +8,7 @@ export function login(user) {
     // var passHash = CryptoJS.SHA256($password);
     // passHash = passHash.toString();
 
-    putRequest("/api/users", { username: user.username, passHash: user.passHash })
+    return putRequest("/api/users", { username: user.username, passHash: user.passHash })
         .then(value => {
             //welcome msg here
             toastr.success("Welcome, " + value.result.username);
@@ -38,7 +38,7 @@ export function register(user) {
     // var passHash = CryptoJS.SHA256($password);
     // passHash = passHash.toString();
 
-    postRequest("/api/users", { username: user.username, passHash: user.passHash })
+    return postRequest("/api/users", { username: user.username, passHash: user.passHash })
         .then(value => {
             //success msg
             toastr.success("Successfully registered");
@@ -67,6 +67,7 @@ export function logout() {
 
 export function checkForLogged() {
     var currentAuthKey = window.localStorage.getItem("auth-key");
+    var currentUser = window.localStorage.getItem("user-username");
     if (currentAuthKey) {
         getRequest("/api/users")
             .then(value => {
@@ -90,4 +91,10 @@ export function checkForLogged() {
         $("#login-button").removeClass("hidden");
         $("#register-button").removeClass("hidden");
     }
+    if (currentAuthKey && currentUser) {
+        return true;
+    } else {
+        return false;
+    }
+
 }

@@ -34,9 +34,9 @@
     "babel-preset-es2015": "^6.24.1",
     "chai": "^3.5.0",
     "mocha": "^3.3.0",
+    "pg": "^6.1.5",
     "sinon": "^2.2.0",
     "sinon-chai": "^2.10.0",
-    "pg": "^6.1.5",
     "systemjs": "^0.20.12",
     "systemjs-plugin-babel": "0.0.21",
     "underscore-db": "^0.12.2"
