@@ -1,14 +1,14 @@
 export function showSelectedProductImage(){
     
     $(document).on('change', '#img-input', function () {
-            var input = $(this),
+            let input = $(this),
                 label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
             input.trigger('fileselect', [label]);
         });
 
         $('#img-input').on('fileselect', function (event, label) {
 
-            var input = $(this).parents('.input-group').find(':text'),
+            let input = $(this).parents('.input-group').find(':text'),
                 log = label;
 
             if (input.length) {
@@ -20,7 +20,7 @@ export function showSelectedProductImage(){
         });
         function readURL(input) {
             if (input.files && input.files[0]) {
-                var reader = new FileReader();
+                let reader = new FileReader();
 
                 reader.onload = function (e) {
                     $('#img-upload').attr('src', e.target.result);

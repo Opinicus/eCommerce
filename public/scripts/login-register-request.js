@@ -3,9 +3,9 @@ import { post as postRequest } from 'requester';
 import { get as getRequest } from 'requester';
 
 export function login(user) {
-    // var $username = $("#username-field").val();
-    // var $password = $("#password-field").val();
-    // var passHash = CryptoJS.SHA256($password);
+    // let $username = $("#username-field").val();
+    // let $password = $("#password-field").val();
+    // let passHash = CryptoJS.SHA256($password);
     // passHash = passHash.toString();
 
     return putRequest("/api/users", { username: user.username, passHash: user.passHash })
@@ -28,14 +28,14 @@ export function login(user) {
             $("#disabled-background").addClass("hidden");
         }, value => {
             //error msg here
-            toastr.error("Username or password is incorrect");
+            toastr.error(value.responseJSON);
         });
 }
 
 export function register(user) {
-    // var $username = $("#username-field").val();
-    // var $password = $("#password-field").val();
-    // var passHash = CryptoJS.SHA256($password);
+    // let $username = $("#username-field").val();
+    // let $password = $("#password-field").val();
+    // let passHash = CryptoJS.SHA256($password);
     // passHash = passHash.toString();
 
     return postRequest("/api/users", { username: user.username, passHash: user.passHash })
@@ -66,13 +66,15 @@ export function logout() {
 }
 
 export function checkForLogged() {
+
     var currentAuthKey = window.localStorage.getItem("auth-key");
     var currentUser = window.localStorage.getItem("user-username");
+
     if (currentAuthKey) {
         getRequest("/api/users")
             .then(value => {
-                var users = value.result.users;
-                var currentLoggedInUser = users.find(u => u.authKey === currentAuthKey);
+                let users = value.result.users;
+                let currentLoggedInUser = users.find(u => u.authKey === currentAuthKey);
                 //set account username label
                 $("#logged-user").text(currentLoggedInUser.username);
             });

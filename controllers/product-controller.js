@@ -1,12 +1,13 @@
-module.exports = function(db) { 
+module.exports = function (db) {
     function get(request, response) {
-        var products = db.get("products")
+        let products = db.get("products")
             .map((product) => {
                 return {
                     title: product.title,
                     price: product.price,
                     img: product.img,
-                    description: product.description
+                    description: product.description,
+                    date: product.date
                 };
             });
         response.status(200);
@@ -16,25 +17,41 @@ module.exports = function(db) {
     }
 
     function post(request, response) {
-        var title = request.body.title;
-        var price = +request.body.price;
-        var img = request.body.img;
-        var description = request.body.description;
-        var category = request.body.category;
+        let title = request.body.title;
+        let price = +request.body.price;
+        let img = request.body.img;
+        let description = request.body.description;
 
         //get current date
-        var date = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+        let date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
 
         //Instantiate product class here
-        var Product = require("../classes/product-class");
-        var postedProduct = new Product(title, price, img, description, category, date);
-        db.get("products").push(postedProduct).write();
+        let Product = require("../classes/product-class");
+        let postedProduct = new Product(title, price, img, description, date);
+
+        let canPush = true;
+        let products = db.get("products").value();
+
+        products.forEach(p => {
+            if (p.title === postedProduct.title) {
+                canPush = false;
+            }
+        });
+
+        if (canPush) {
+            db.get("products").push(postedProduct).write();
+            response.status(200).json("Success");
+        }
+        else {
+            response.status(400).json("Product title already exists");
+        }
+
     }
 
     function getLatest(request, response) {
-        var products = db.get("products").value();
-        var len = products.length;
-        var latest = products.slice(len - 3, len);
+        let products = db.get("products").value();
+        let len = products.length;
+        let latest = products.slice(len - 4, len).reverse();
 
         response.status(200);
         response.json({

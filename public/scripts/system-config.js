@@ -22,7 +22,10 @@ SystemJS.config({
   "sessionCartClass": "classes/session-cart-class.js",
   'addToCart': 'scripts/add-to-cart.js',
   'removeFromCart': 'scripts/remove-from-cart.js',
+
+  'uploadProduct': 'scripts/upload-product.js',
   'showSelectedProductImage': 'scripts/show-selected-product-image.js',
+  'filter': 'scripts/filter.js',
 
   //Library files
   

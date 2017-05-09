@@ -1,7 +1,7 @@
 export function showCartProductsPopUp()
 {
-    var $popup = $(".cart-container");
-    var $background = $("#disabled-background");
+    let $popup = $(".cart-container");
+    let $background = $("#disabled-background");
 
     $popup.removeClass("hidden");
     $background.removeClass("hidden");
@@ -9,8 +9,8 @@ export function showCartProductsPopUp()
 }
 
 export function hideCartPopUp() {
-    var $popup = $(".cart-container");
-    var $background = $("#disabled-background");
+    let $popup = $(".cart-container");
+    let $background = $("#disabled-background");
 
     $popup.addClass("hidden");
     $background.addClass("hidden");

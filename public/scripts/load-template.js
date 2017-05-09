@@ -2,10 +2,10 @@ import { get as getRequest } from "requester";
 import "handlebars";
 
 export function loadTemplate(templateName, dataUrl, selector) {
-    var template;
-    var data;
-    var compiledTemplate;
-    var $element;
+    let template;
+    let data;
+    let compiledTemplate;
+    let $element;
     getRequest(`/templates/${templateName}.handlebars`)
         .then(value => {
             template = value;
@@ -21,9 +21,9 @@ export function loadTemplate(templateName, dataUrl, selector) {
 }
 
 export function loadTemplateFromData(templateName, data, selector) {
-    var template;
-    var compiledTemplate;
-    var $element;
+    let template;
+    let compiledTemplate;
+    let $element;
     getRequest(`/templates/${templateName}.handlebars`)
         .then(value => {
             template = value;

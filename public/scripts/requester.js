@@ -1,5 +1,5 @@
 function request(url, type, body, headers) {
-    var promise = new Promise((resolve, reject) => $.ajax({
+    let promise = new Promise((resolve, reject) => $.ajax({
         url: url,
         method: type,
         data: body,

@@ -1,10 +1,11 @@
 import { get as getRequest } from "requester";
+import { post as postRequest } from "requester";
 import { loadTemplateFromData } from "loadTemplate";
 import { SessionCart } from "sessionCartClass";
 import { removeFromCart } from 'removeFromCart';
 
 export function showShoppingCart() {
-    var loggedIn = false;
+    let loggedIn = false;
 
     if (window.localStorage.getItem("auth-key")) {
         loggedIn = true;
@@ -13,17 +14,19 @@ export function showShoppingCart() {
     if (loggedIn) {
         getRequest("/api/users")
             .then(value => {
-                var users = value.result.users;
-                var currentUser = users.find(u => u.authKey === window.localStorage.getItem("auth-key"));
+                let users = value.result.users;
+                let currentUser = users.find(u => u.authKey === window.localStorage.getItem("auth-key"));
                 loadTemplateFromData("shopping-cart", currentUser.cart, "main");
 
-                var sessionCart = new SessionCart(currentUser.cart.items);
+                let sessionCart = new SessionCart(currentUser.cart.items);
                 setTimeout(() => {
+                    let itemWord = (sessionCart.items.length === 1) ? " item" : " items";
                     $("#total-price").text(sessionCart.getTotalPrice() + "$");
+                    $("#item-count").text(sessionCart.items.length + itemWord);
                     $(".remove-button").on("click", (ev) => {
-                        var $target = $(ev.target);
-                        var $productContainer = $target.parent().parent().parent();
-                        var index = $productContainer.index();
+                        let $target = $(ev.target);
+                        let $productContainer = $target.parent().parent().parent();
+                        let index = $productContainer.index();
 
                         removeFromCart(index);
 
@@ -31,6 +34,19 @@ export function showShoppingCart() {
                         $productContainer.remove();
                         sessionCart.remove(index);
                         $("#total-price").text(sessionCart.getTotalPrice() + "$");
+                        $("#item-count").text(sessionCart.items.length + itemWord);
+                    });
+
+                    $("#buy-button").on("click", (ev) => {
+                        let options = {
+                            authKey: window.localStorage.getItem("auth-key")
+                        };
+                        postRequest("/api/users/cart/order", options)
+                            .then(value => toastr.success(value), value => toastr.error(value.responseJSON));
+                        sessionCart.clearCart();
+                        $(".list-group-item").remove();
+                        $("#total-price").text(sessionCart.getTotalPrice() + "$");
+                        $("#item-count").text(sessionCart.items.length + itemWord);
                     });
                 }, 50);
             });

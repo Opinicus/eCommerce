@@ -1,33 +1,9 @@
 {
   "users": [
     {
-      "username": "pesho",
-      "passHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "authKey": "$fpiFl+U*J&V$z=Arx+bWH_MlW*DbPTN*qukS$Sn#qqNGXx%fLfp=#x!OWwM"
-    },
-    {
-      "username": "tosho",
-      "passHash": "3816a11c31d2747dbd20daee5937bc6425c109f5c49444131b7d5846d52c7ca8",
-      "authKey": "OD-AKn(+nxpuD=jz=HeJ_(mmxzukae#OOnUVYDFG%Dsw$ny$swYDV&*rSVlY"
-    },
-    {
       "username": "admin",
       "passHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
       "authKey": "&&*)$Z=Bv-k=NPxQhuSyeAKJtxkzOomp+^@wmtqwdxqP=Wr^SMrb(WwZKNSq"
-    },
-    {
-      "username": "Darin",
-      "passHash": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
-      "authKey": "bBNSjKlf@vb=-!Vadk@TsnRw)_hvFCbhOc(MbwVuAdHFKCsUaEBnkchr&zQ*"
-    },
-    {
-      "username": "test1",
-      "passHash": "1b4f0e9851971998e732078544c96b36c3d01cedf7caa332359d6f1d83567014",
-      "authKey": "nvFXeqsXPhTod@=u-lYQl!Hxmqqj%uE)DnVIiVohwrybRcW#w&cJYzRY*hO)",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
     },
     {
       "username": "gogo",
@@ -36,146 +12,18 @@
       "cart": {
         "items": [
           {
-            "title": "bag",
-            "price": 10,
-            "img": "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-            "description": "epic bag",
-            "category": "awesome",
-            "date": "dnes"
+            "title": "Spaceship Wonnabe",
+            "price": 5,
+            "img": "https://i.ytimg.com/vi/hObbL4DCesI/maxresdefault.jpg",
+            "description": "Yey"
           },
           {
-            "title": "bag",
-            "price": 10,
-            "img": "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-            "description": "epic bag",
-            "category": "awesome",
-            "date": "dnes"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
+            "title": "kotka",
+            "price": 1,
+            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
+            "description": "kotka"
           }
-        ],
-        "numberOfItems": 2
-      }
-    },
-    {
-      "username": "petkan",
-      "passHash": "82bbd17ce08c932c83e13995ae7376a01c862188243da5176ba7b8e7658842db",
-      "authKey": "aubxTWUKpG+#+HzDR-bAUdZyFswvMTDPExYT@CVraK+WiP=ol@DhP+ydrLuz",
-      "cart": {
-        "items": [
-          {
-            "title": "bag",
-            "price": 10,
-            "img": "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-            "description": "epic bag",
-            "category": "awesome",
-            "date": "dnes"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          }
-        ],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "goshu",
-      "passHash": "0ecbee5b71c7bc2ca00c0474251c304bb669a46f87082c229f9e9c0091f01cf7",
-      "authKey": "nKD&hlCUT#E)WZEgZV-bsRigbbIuD&hOCB=lTreWVjRZsz@&__YsGFI*#baS",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "dawe",
-      "passHash": "876e93bac1ef22c5b9bd9ff6a775437a8a1965653bfa0ce6ae2c47cdf7cb2cb7",
-      "authKey": "WkJJpBqUBlBO*kFg(O#YXqKxoDns+#mefO&hLFgJpf&LbclN(kuTjEvbPy(P",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "newe",
-      "passHash": "686da06c55afa0859bc480f204c651c3f3d9b9a5fff4f7fee74837e3823470c4",
-      "authKey": "wG!J#LwujRqWacyZkWu)aBwO-qUnfpUNw!xwgQE*FgFIqz_Ecibjmy%A#=)U",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "dad",
-      "passHash": "6fe8ecbc1deafa51c2ecf088cf364eba1ceba9032ffbe2621e771b90ea93153d",
-      "authKey": "nir(dqIlB*t)DiKyqx)KHUBXgQKP!lZSkbaXz$n=hdt+N%^M-UKvIVnGERr#",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
-      }
-    },
-    {
-      "username": "sun",
-      "passHash": "27756f050e14a1cb1c1ee867f0eace9ea4d9fcb81b8bee089469f1ebd5fd7b17",
-      "authKey": "dOJ@yYsTxX$Pn%=_GLz&h=EEtOjATqr+fDYMFLjECI+yfKFOw_Xo!YMRfMK%",
-      "cart": {
-        "items": [],
-        "numberOfItems": 0
+        ]
       }
     },
     {
@@ -183,14 +31,7 @@
       "passHash": "8d9001d32c6a703d95921a77115050f33dd823d3f1730bd35215dcbecad6dc20",
       "authKey": "NWTRssDxY_qrDpZvnB_eGWVfmlXzawWE+Cgu=KKbBvVVM-AUqGn%gdmC+=tu",
       "cart": {
-        "items": [
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          }
-        ]
+        "items": []
       }
     },
     {
@@ -198,14 +39,7 @@
       "passHash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
       "authKey": ")xqFefGgokc*ZK+@HuZSDyzp)#=bw*fjKfDbhqw-hoFuwrFSZAhh-zY*H_wC",
       "cart": {
-        "items": [
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          }
-        ]
+        "items": []
       }
     },
     {
@@ -754,70 +588,53 @@
   ],
   "products": [
     {
-      "title": "Product 1",
-      "price": 1000,
-      "description": "Amazing! WOW!",
-      "img": "url"
+      "title": "Spaceship Wonnabe",
+      "price": 50000,
+      "img": "https://i.ytimg.com/vi/hObbL4DCesI/maxresdefault.jpg",
+      "description": "Spaceship Wonnabe",
+      "date": "2017/05/09"
     },
     {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
+      "title": "Imperial TIE fighter",
+      "price": 32000,
+      "img": "https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-tie-fighter-tie-fighter-star-wars_1_000000015624_5.gif",
+      "description": "Imperial TIE fighter",
+      "date": "2017/05/09"
     },
     {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
+      "title": "YT-1300f light freighter",
+      "price": 38000,
+      "img": "http://cdn.fansided.com/wp-content/blogs.dir/280/files/2016/11/millennium-falcon-space.jpg",
+      "description": "YT-1300f light freighter",
+      "date": "2017/05/09"
     },
     {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
+      "title": "T-65 X-wing starfighter",
+      "price": 15000,
+      "img": "http://s5.favim.com/orig/51/star-wars-x-wing-x-wing-fighter-Favim.com-483257.jpg",
+      "description": "T-65 X-wing starfighter",
+      "date": "2017/05/09"
     },
     {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
+      "title": "MCRN Taichi Corvette Class",
+      "price": 12500,
+      "img": "https://vignette4.wikia.nocookie.net/expanse/images/f/f1/Rocinante.png/revision/latest?cb=20151117213846",
+      "description": "MCRN Taichi Corvette Class",
+      "date": "2017/05/09"
     },
     {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
+      "title": "Canterburry Icehowler",
+      "price": 24000,
+      "img": "http://vignette3.wikia.nocookie.net/expanse/images/d/d1/Canterbury.jpg/revision/latest?cb=20150712224655",
+      "description": "Canterburry Icehowler",
+      "date": "2017/05/09"
     },
     {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
+      "title": "NCC-1701-A Enterprise",
+      "price": 78000,
+      "img": "http://wallpapercave.com/wp/NVC0Z2b.jpg",
+      "description": "NCC-1701-A Enterprise",
+      "date": "2201/05/09"
     }
   ]
 }

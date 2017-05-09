@@ -14,17 +14,27 @@ import { checkForAdmin } from 'checkForAdmin';
 import { showShoppingCart } from "showShoppingCart";
 import { addToCart } from 'addToCart';
 import { showSelectedProductImage } from 'showSelectedProductImage';
+import { uploadProduct } from 'uploadProduct';
+import { filter } from 'filter';
 
-var router = new Navigo(null, true);
+const router = new Navigo(null, true);
 router.on("/home", () => {
 	loadTemplate("home", "/api/products/latest", "main");
+
+	setTimeout(() => {
+		$(".add-to-cart-button").on("click", (ev) => {
+			let $parent = $(ev.target).parent().parent().parent();
+			addToCart($parent);
+		});
+	}, 50);
 });
 router.on("/products", () => {
 	loadTemplate("product", "/api/products", "main");
 
 	setTimeout(() => {
+		filter();
 		$(".add-to-cart-button").on("click", (ev) => {
-			var $parent = $(ev.target).parent().parent().parent();
+			let $parent = $(ev.target).parent().parent().parent();
 			addToCart($parent);
 		});
 	}, 50);
@@ -35,11 +45,12 @@ router.on("/contact", () => {
 });
 // TODO: api/product data
 router.on("/addProduct", () => {
-	loadTemplate("product-form", "", "main");
+	loadTemplate("product-form-add-product", "", "main");
 
 	setTimeout(() => {
 		showSelectedProductImage();
-	}, 50)
+		$("#submit").on("click", uploadProduct);
+	}, 50);
 });
 // TODO: api/shoppingCart data
 router.on("/shoppingCart", () => {
@@ -58,14 +69,14 @@ $("#login-button").on("click", showLoginPopUp);
 $("#register-button").on("click", showRegisterPopUp);
 $("#disabled-background").on("click", hidePopUp);
 $("#submit-button").on("click", (ev) => {
-	var $target = $(ev.target);
+	let $target = $(ev.target);
 	
-	var $username = $("#username-field").val();
-	var $password = $("#password-field").val();
-	var passHash = CryptoJS.SHA256($password);
+	let $username = $("#username-field").val();
+	let $password = $("#password-field").val();
+	let passHash = CryptoJS.SHA256($password);
 	passHash = passHash.toString();
 
-	var user = {
+	let user = {
 		username: $username,
 		passHash: passHash
 	};
@@ -85,9 +96,13 @@ $("#logout-button").on("click", () => {
 	router.navigate("/home");
 });
 
+$("#twitter-share-button").on("click", () => {
+	window.open("https://twitter.com/intent/tweet?text=Awesome%20shop%20for%20spaceships", "Tweet", "height=400,width=700");
+});
+
 //rework might be needed
 $(window).on("hashchange", () => {
-	var hash = window.location.hash;
+	let hash = window.location.hash;
 	hash = hash.substr(2);
 
 	//use a switch here to switch templates and fix bug
@@ -107,7 +122,7 @@ $(window).on("load", () => {
 
 //rework might be needed
 $(window).on("ready", () => {
-	var hash = window.location.hash;
+	let hash = window.location.hash;
 	console.log(hash)
 
 });

@@ -1,19 +1,10 @@
 <div class="product-form-container center-block">
     <div class="panel panel-primary product-form-panel">
         <div class="panel-heading product-form-panel-heading">
-            <h3 class="panel-title">Add/Edit/Show</h3>
+            <h3 class="panel-title">{{this.title}}</h3>
         </div>
         <div class="center-block">
             <div class="form-group product-form-group-body">
-                <label>Upload Image</label>
-                <div class="input-group">
-                    <span class="input-group-btn">
-                                    <span class="btn btn-default btn-file">
-                                        Browse… <input type="file" id="img-input">
-                                    </span>
-                    </span>
-                    <input type="text" class="form-control" readonly>
-                </div>
                 <img id='img-upload' class="img-thumbnail" src="{{this.img}}" />
             </div>
 

@@ -1,10 +1,15 @@
 .product-form-container{
+    background-color: #089846;
     max-width: 800px;
 }
 .product-form-panel{
+    background-color: #742ECC;
+    border-color: #742ECC;
     padding-bottom: 15px; 
 }
-.product-form-panel-heading{
+#product-form-panel-heading{
+    background-color: #742ECC;
+    border-color: #742ECC;
     margin-bottom: 15px; 
 }
 .product-form-group-body{
@@ -31,6 +36,26 @@
     cursor: inherit;
     display: block;
 }
+
+#submit{
+    text-align: center;
+
+    font-size:20px;
+    display:block;
+    cursor:pointer;
+
+    
+    padding:15px;
+
+    border-radius: 0px;
+    border-color: #742ECC;
+    background-color: #742ECC;  
+    color: #fff   
+}
+#submit:hover{
+    background: orange;
+}
+
 
 #img-upload{
     width: 50%;

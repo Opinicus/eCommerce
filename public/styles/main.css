@@ -2,23 +2,39 @@ html{
     position: relative;
     width: 100%;
     min-height: 100%;
+    
+    background-image: url("../images/night-sky-stars.gif");
+    background-repeat: repeat;
 }
-
 body{
     margin-bottom: 70px;
+    background-color: transparent;
 }
 
 header{
-    background-color: orange;
+    background-color: #089846;
+}
+header h1 {
+    color: #742ECC;
+    font-size: 64px;
 }
 
 main{
     overflow: auto;
 }
-
-.img-responsive {
-    width: 100px;
-    height: 100px;
+.container{
+    background-color: transparent !important;
+}
+.panel{
+    background-color: transparent !important;
+}
+.panel-primary{
+    border-color: black;
+}
+#home-page-panel-heading {
+    background-color: #742ECC;
+    border-color: #742ECC;
+    border-radius: 2px;
 }
 
 .navbar{
@@ -27,7 +43,7 @@ main{
 
 .footer{
     padding-top: 1.5em;
-    background-color: orange;
+    background-color: #089846;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -73,4 +89,52 @@ main{
 
 .hidden {
     display: none;
+}
+
+.toast-success {
+  background-color: mediumpurple;
+}
+
+
+@media (min-width: 1200px){
+    .col-lg-2{
+        width: 25%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .col-md-3{
+        width: 45%;
+    }
+    .thumbnail{
+        zoom: 105%;
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .thumbnail{
+        zoom: 110%;
+    }
+    body{
+        font-size: 18px;
+    }
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .thumbnail{
+        zoom: 125%;
+    }
+    body{
+        font-size: 20px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .thumbnail{
+        zoom: 135%;
+    }
+    body{
+        font-size: 18px;
+    }
 }
