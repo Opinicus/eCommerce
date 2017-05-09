@@ -35,6 +35,12 @@ export class SessionCart {
         }
     }
 
+    clearCart() {
+        this.items = [];
+
+        return this;
+    }
+
     getTotalPrice() {
         var sum = 0;
         this.items.forEach(item => {

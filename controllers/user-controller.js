@@ -79,8 +79,6 @@ module.exports = function (db) {
     function postInCart(request, response) {
         var productToAdd = request.body.product;
 
-
-
         var items = db.get("users")
             .filter({ "authKey": request.body.authKey })
             .map("cart")
@@ -96,15 +94,6 @@ module.exports = function (db) {
             "numbersOfItems": items.length
         };
 
-        // console.log(cart);
-
-        // db.get("users")
-        //     .filter({"authKey": request.body.authKey})
-        //     .set("cart", cart)
-        //     .write();
-
-
-
         db.get("users")
             .filter({ "authKey": request.body.authKey })
             .map("cart")
@@ -112,10 +101,6 @@ module.exports = function (db) {
             .push(productToAdd)
             .write();
 
-        // db.get("users")
-        //     .filter({"authKey": request.body.authKey})
-        //     .set("cart", cart)
-        //     .write();
     }
 
     function removeFromCart(request, response) {
@@ -147,25 +132,24 @@ module.exports = function (db) {
             }
         });
 
-        // db.get("users")
-        //     .assign({ items: items })
-        //     .write();
+        db.updateWhere(db.users, {users: allUsersObjects}, {users: newArray}).write();
+    }
 
-        // db.get("users")
-        //     .filter({"authKey": request.body.authKey})
-        //     .set("cart", cart)
-        //     .value();
+    function makeOrder(request, response) {
+        var allUsersObjects = db.get("users").value();
 
-        // db.get("users")
-        //     .find({"authKey": request.body.authKey})
-        //     .assign("cart", cart)
-        //     .write();
-
-        // db.get("users")
-        //     .filter({ "authKey": request.body.authKey })
-        //     .updateWhere("cart", {cart: cart})
+        var newArray = allUsersObjects.map(u => {
+            if (u.authKey === request.body.authKey) {
+                u.cart.items = [];
+                return u;
+            }
+            else {
+                return u;
+            }
+        });
 
         db.updateWhere(db.users, {users: allUsersObjects}, {users: newArray}).write();
+        response.status(200).json("Order sent");
     }
 
     return {
@@ -173,6 +157,7 @@ module.exports = function (db) {
         post: post,
         get: get,
         postInCart: postInCart,
-        removeFromCart: removeFromCart
+        removeFromCart: removeFromCart,
+        makeOrder: makeOrder
     };
 };

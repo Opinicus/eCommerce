@@ -34,48 +34,7 @@
       "passHash": "16af0577252ea2fc2b73260d8fe6a4e73155e9f83bb234588b561ab01c9bca6b",
       "authKey": "d$pAbUTpg-Hqr_FPzfemOYaS@&oH#z!Pev&Dr@BI**MgVvPdKSyaakvNNPlO",
       "cart": {
-        "items": [
-          {
-            "title": "bag",
-            "price": 10,
-            "img": "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-            "description": "epic bag",
-            "category": "awesome",
-            "date": "dnes"
-          },
-          {
-            "title": "bag",
-            "price": 10,
-            "img": "https://s3-us-west-1.amazonaws.com/powr/defaults/image-slider2.jpg",
-            "description": "epic bag",
-            "category": "awesome",
-            "date": "dnes"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          }
-        ],
+        "items": [],
         "numberOfItems": 2
       }
     },
@@ -251,10 +210,16 @@
             "description": "kotka"
           },
           {
-            "title": "druga kotka",
-            "price": 1.99,
-            "img": "http://petvet.bg/uploads/articles/2011/11/994de3a3ee52d439b4b603e481085b6d.jpg",
-            "description": "kotka"
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
+          },
+          {
+            "title": "product 2",
+            "price": 100,
+            "img": "neshto",
+            "description": "neshto2"
           }
         ]
       }

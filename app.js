@@ -35,6 +35,7 @@ app.post("/api/users", userController.post);
 app.get("/api/users", userController.get);
 app.post("/api/users/cart", userController.postInCart);
 app.delete("/api/users/cart", userController.removeFromCart);
+app.post("/api/users/cart/order", userController.makeOrder);
 
 
 // // FIX: missing credentions
