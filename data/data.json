@@ -11,18 +11,7 @@
       "authKey": "d$pAbUTpg-Hqr_FPzfemOYaS@&oH#z!Pev&Dr@BI**MgVvPdKSyaakvNNPlO",
       "cart": {
         "items": [
-          {
-            "title": "Spaceship Wonnabe",
-            "price": 5,
-            "img": "https://i.ytimg.com/vi/hObbL4DCesI/maxresdefault.jpg",
-            "description": "Yey"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          }
+         
         ]
       }
     },
@@ -31,7 +20,9 @@
       "passHash": "8d9001d32c6a703d95921a77115050f33dd823d3f1730bd35215dcbecad6dc20",
       "authKey": "NWTRssDxY_qrDpZvnB_eGWVfmlXzawWE+Cgu=KKbBvVVM-AUqGn%gdmC+=tu",
       "cart": {
-        "items": []
+        "items": [
+          
+        ]
       }
     },
     {
@@ -584,6 +575,13 @@
       "cart": {
         "items": []
       }
+    },
+    {
+      "username": "Anonymous",
+      "authKey": "lQ*hz)BVhzL+%%rQhLs_Nyz*I%YMgMGJ-A*wc+Cr#WjbBOwpHaT*ohuPs#Kf",
+      "cart": {
+        "items": []
+      }
     }
   ],
   "products": [
@@ -604,35 +602,35 @@
     {
       "title": "YT-1300f light freighter",
       "price": 38000,
-      "img": "http://cdn.fansided.com/wp-content/blogs.dir/280/files/2016/11/millennium-falcon-space.jpg",
+      "img": "https://s3.eu-central-1.amazonaws.com/opinicus-bucket/images/millennium-falcon-space.jpg",
       "description": "YT-1300f light freighter",
       "date": "2017/05/09"
     },
     {
       "title": "T-65 X-wing starfighter",
       "price": 15000,
-      "img": "http://s5.favim.com/orig/51/star-wars-x-wing-x-wing-fighter-Favim.com-483257.jpg",
+      "img": "https://s3.eu-central-1.amazonaws.com/opinicus-bucket/images/star-wars-x-wing-x-wing-fighter-Favim.com-483257.jpg",
       "description": "T-65 X-wing starfighter",
       "date": "2017/05/09"
     },
     {
       "title": "MCRN Taichi Corvette Class",
       "price": 12500,
-      "img": "https://vignette4.wikia.nocookie.net/expanse/images/f/f1/Rocinante.png/revision/latest?cb=20151117213846",
+      "img": "https://s3.eu-central-1.amazonaws.com/opinicus-bucket/images/Rocinante.png",
       "description": "MCRN Taichi Corvette Class",
       "date": "2017/05/09"
     },
     {
       "title": "Canterburry Icehowler",
       "price": 24000,
-      "img": "http://vignette3.wikia.nocookie.net/expanse/images/d/d1/Canterbury.jpg/revision/latest?cb=20150712224655",
+      "img": "https://s3.eu-central-1.amazonaws.com/opinicus-bucket/images/Canterbury.jpg",
       "description": "Canterburry Icehowler",
       "date": "2017/05/09"
     },
     {
       "title": "NCC-1701-A Enterprise",
       "price": 78000,
-      "img": "http://wallpapercave.com/wp/NVC0Z2b.jpg",
+      "img": "https://s3.eu-central-1.amazonaws.com/opinicus-bucket/images/NVC0Z2b.jpg",
       "description": "NCC-1701-A Enterprise",
       "date": "2201/05/09"
     }
