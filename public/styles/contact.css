@@ -73,3 +73,25 @@ form textarea {
 .cf:after {
   clear: both;
 }
+
+.cf {
+  background-color: #089846;
+}
+
+.cf h3 {
+  color: white;
+  padding: 5px;
+}
+
+.cf-purple {
+  background-color: #742ECC !important;
+}
+
+.cf-purple h4 {
+  color: white !important;
+}
+
+.contact-container {
+  border: none !important;
+}
+
