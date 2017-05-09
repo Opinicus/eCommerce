@@ -1,5 +1,4 @@
 .thumbnail{
-    max-width: 300px;
     background-color: #089846;
 }
 
@@ -9,7 +8,6 @@
 
 .thumbnail-price{
     display:block;
-    max-width:300px;
     margin:20px auto;
     padding:15px;
     background:rgba(0,0,0,0.3);

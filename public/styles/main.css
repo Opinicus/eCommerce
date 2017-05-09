@@ -92,6 +92,9 @@ main{
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
+    .col-md-3{
+        width: 35%;
+    }
     .thumbnail{
         zoom: 105%;
     }
