@@ -34,6 +34,7 @@ export function showShoppingCart() {
                         $productContainer.remove();
                         sessionCart.remove(index);
                         $("#total-price").text(sessionCart.getTotalPrice() + "$");
+                        $("#item-count").text(sessionCart.items.length + itemWord);
                     });
 
                     $("#buy-button").on("click", (ev) => {
