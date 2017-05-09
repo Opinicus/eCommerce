@@ -25,6 +25,17 @@ main{
 .container{
     background-color: transparent !important;
 }
+.panel{
+    background-color: transparent !important;
+}
+.panel-primary{
+    border-color: black;
+}
+.panel-primary .panel-heading{
+    background-color: #742ECC;
+    border-color: #742ECC;
+    border-radius: 2px;
+}
 
 .navbar{
     border-radius: 0px;
