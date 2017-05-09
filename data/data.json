@@ -45,46 +45,53 @@
   ],
   "products": [
     {
-      "title": "druga kotka",
-      "price": 1.99,
-      "img": "http://petvet.bg/uploads/articles/2011/11/994de3a3ee52d439b4b603e481085b6d.jpg",
-      "description": "kotka",
-      "date": "2017/05/08"
-    },
-    {
-      "title": "druga kotka",
-      "price": 1.99,
-      "img": "http://petvet.bg/uploads/articles/2011/11/994de3a3ee52d439b4b603e481085b6d.jpg",
-      "description": "kotka",
-      "date": "2017/05/08"
-    },
-    {
-      "title": "kotka",
-      "price": 2,
-      "img": "http://petvet.bg/uploads/articles/2011/11/994de3a3ee52d439b4b603e481085b6d.jpg",
-      "description": "kotka",
-      "date": "2017/05/08"
-    },
-    {
-      "title": "kotka",
-      "price": 9.99,
-      "img": "http://static.baubau.bg/resources/kade-otiva-kotkata-kato-izchezne.jpg",
-      "description": "kotka",
-      "date": "2017/05/08"
-    },
-    {
-      "title": "pesho",
-      "price": 3,
-      "img": "http://static.baubau.bg/resources/kade-otiva-kotkata-kato-izchezne.jpg",
-      "description": "123",
-      "date": "2017/05/08"
-    },
-    {
       "title": "Spaceship Wonnabe",
-      "price": 5,
+      "price": 50000,
       "img": "https://i.ytimg.com/vi/hObbL4DCesI/maxresdefault.jpg",
-      "description": "Yey",
+      "description": "Spaceship Wonnabe",
       "date": "2017/05/09"
+    },
+    {
+      "title": "Imperial TIE fighter",
+      "price": 32000,
+      "img": "https://imgs-tuts-dragoart-386112.c.cdn77.org/how-to-draw-a-tie-fighter-tie-fighter-star-wars_1_000000015624_5.gif",
+      "description": "Imperial TIE fighter",
+      "date": "2017/05/09"
+    },
+    {
+      "title": "YT-1300f light freighter",
+      "price": 38000,
+      "img": "http://cdn.fansided.com/wp-content/blogs.dir/280/files/2016/11/millennium-falcon-space.jpg",
+      "description": "YT-1300f light freighter",
+      "date": "2017/05/09"
+    },
+    {
+      "title": "T-65 X-wing starfighter",
+      "price": 15000,
+      "img": "http://s5.favim.com/orig/51/star-wars-x-wing-x-wing-fighter-Favim.com-483257.jpg",
+      "description": "T-65 X-wing starfighter",
+      "date": "2017/05/09"
+    },
+    {
+      "title": "MCRN Taichi Corvette Class",
+      "price": 12500,
+      "img": "https://vignette4.wikia.nocookie.net/expanse/images/f/f1/Rocinante.png/revision/latest?cb=20151117213846",
+      "description": "MCRN Taichi Corvette Class",
+      "date": "2017/05/09"
+    },
+    {
+      "title": "Canterburry Icehowler",
+      "price": 24000,
+      "img": "http://vignette3.wikia.nocookie.net/expanse/images/d/d1/Canterbury.jpg/revision/latest?cb=20150712224655",
+      "description": "Canterburry Icehowler",
+      "date": "2017/05/09"
+    },
+    {
+      "title": "NCC-1701-A Enterprise",
+      "price": 78000,
+      "img": "http://wallpapercave.com/wp/NVC0Z2b.jpg",
+      "description": "NCC-1701-A Enterprise",
+      "date": "2201/05/09"
     }
   ]
 }
