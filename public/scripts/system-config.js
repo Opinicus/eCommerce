@@ -23,6 +23,7 @@ SystemJS.config({
   'removeFromCart': 'scripts/remove-from-cart.js',
   'uploadProduct': 'scripts/upload-product.js',
   'showSelectedProductImage': 'scripts/show-selected-product-image.js',
+  'filter': 'scripts/filter.js',
 
   //Library files
   

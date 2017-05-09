@@ -15,6 +15,7 @@ import { showShoppingCart } from "showShoppingCart";
 import { addToCart } from 'addToCart';
 import { showSelectedProductImage } from 'showSelectedProductImage';
 import { uploadProduct } from 'uploadProduct';
+import { filter } from 'filter';
 
 
 var router = new Navigo(null, true);
@@ -32,6 +33,7 @@ router.on("/products", () => {
 	loadTemplate("product", "/api/products", "main");
 
 	setTimeout(() => {
+		filter();
 		$(".add-to-cart-button").on("click", (ev) => {
 			var $parent = $(ev.target).parent().parent().parent();
 			addToCart($parent);

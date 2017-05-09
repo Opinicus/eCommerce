@@ -41,7 +41,7 @@ export function showShoppingCart() {
                             authKey: window.localStorage.getItem("auth-key")
                         };
                         postRequest("/api/users/cart/order", options)
-                            .then(value => toastr.success(value));
+                            .then(value => toastr.success(value), value => toastr.error(value.responseJSON));
                         sessionCart.clearCart();
                         $(".list-group-item").remove();
                         $("#total-price").text(sessionCart.getTotalPrice() + "$");

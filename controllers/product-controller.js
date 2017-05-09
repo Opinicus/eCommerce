@@ -50,7 +50,7 @@ module.exports = function (db) {
     function getLatest(request, response) {
         var products = db.get("products").value();
         var len = products.length;
-        var latest = products.slice(len - 3, len).reverse();
+        var latest = products.slice(len - 6, len).reverse();
 
         response.status(200);
         response.json({

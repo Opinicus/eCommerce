@@ -34,21 +34,7 @@
       "passHash": "16af0577252ea2fc2b73260d8fe6a4e73155e9f83bb234588b561ab01c9bca6b",
       "authKey": "d$pAbUTpg-Hqr_FPzfemOYaS@&oH#z!Pev&Dr@BI**MgVvPdKSyaakvNNPlO",
       "cart": {
-        "items": [
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          },
-          {
-            "title": "kotka",
-            "price": 1,
-            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
-            "description": "kotka"
-          }
-        ],
-        "numberOfItems": 2
+        "items": []
       }
     },
     {
@@ -157,18 +143,6 @@
       "cart": {
         "items": [
           {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          },
-          {
             "title": "kotka",
             "price": 1,
             "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
@@ -221,18 +195,6 @@
             "price": 1,
             "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
             "description": "kotka"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
-          },
-          {
-            "title": "product 2",
-            "price": 100,
-            "img": "neshto",
-            "description": "neshto2"
           }
         ]
       }
@@ -242,84 +204,11 @@
       "passHash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
       "authKey": ")xqFefGgokc*ZK+@HuZSDyzp)#=bw*fjKfDbhqw-hoFuwrFSZAhh-zY*H_wC",
       "cart": {
-        "items": [
-          {
-            "title": "Product 1",
-            "price": 1000,
-            "img": "url",
-            "description": "Amazing! WOW!"
-          }
-        ]
+        "items": []
       }
     }
   ],
   "products": [
-    {
-      "title": "Product 1",
-      "price": 1000,
-      "description": "Amazing! WOW!",
-      "img": "url"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
-    {
-      "title": "product 2",
-      "price": 100,
-      "img": "neshto",
-      "description": "neshto2"
-    },
     {
       "title": "kotka",
       "price": 1,

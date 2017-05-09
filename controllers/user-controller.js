@@ -137,6 +137,12 @@ module.exports = function (db) {
 
     function makeOrder(request, response) {
         var allUsersObjects = db.get("users").value();
+        var currentUser = allUsersObjects.find(u => u.authKey === request.body.authKey);
+
+        if (currentUser.cart.items.length === 0) {
+            response.status(400).json("Cart is empty");
+            return;
+        }
 
         var newArray = allUsersObjects.map(u => {
             if (u.authKey === request.body.authKey) {

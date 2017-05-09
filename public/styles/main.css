@@ -86,6 +86,10 @@ main{
     display: none;
 }
 
+.toast-success {
+  background-color: mediumpurple;
+}
+
 
 @media (min-width: 1200px){
 
