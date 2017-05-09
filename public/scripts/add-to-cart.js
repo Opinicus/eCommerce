@@ -2,10 +2,10 @@ import { get as getRequest } from 'requester';
 import { post as postRequest } from 'requester';
 
 export function addToCart(parent) {
-    var products;
-    var selectedProductTitle;
-    var selectedProduct;
-    var options;
+    let products;
+    let selectedProductTitle;
+    let selectedProduct;
+    let options;
 
     if (!window.localStorage.getItem("auth-key")) {
         toastr.error("Login to add items to cart");

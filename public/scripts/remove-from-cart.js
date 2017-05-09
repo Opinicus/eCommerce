@@ -3,7 +3,7 @@ import { get as getRequest } from 'requester';
 import { loadTemplateFromData } from "loadTemplate";
 
 export function removeFromCart(index) {
-    var options = {
+    const options = {
         authKey: window.localStorage.getItem("auth-key"),
         index: index
     };

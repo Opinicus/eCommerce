@@ -1,4 +1,4 @@
-var Product = require("./product-class");
+let Product = require("./product-class");
 
 module.exports = class Cart {
     constructor(products) {
@@ -17,7 +17,7 @@ module.exports = class Cart {
     }
 
     remove(item) {
-        var index;
+        let index;
         if (typeof item === "string") {
             index = this.items.findIndex(i => i.title === item);
             this.items.splice(index, 1);
@@ -33,7 +33,7 @@ module.exports = class Cart {
     }
 
     getTotalPrice() {
-        var sum = 0;
+        let sum = 0;
         this.items.forEach(item => {
             sum += item.price;
         });

@@ -15,7 +15,7 @@ export class SessionCart {
     }
 
     remove(item) {
-        var index;
+        let index;
         if (typeof item === "string") {
             index = this.items.findIndex(i => i.title === item);
             this.items.splice(index, 1);
@@ -42,7 +42,7 @@ export class SessionCart {
     }
 
     getTotalPrice() {
-        var sum = 0;
+        let sum = 0;
         this.items.forEach(item => {
             sum += item.price;
         });

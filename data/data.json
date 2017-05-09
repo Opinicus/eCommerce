@@ -34,20 +34,7 @@
       "passHash": "16af0577252ea2fc2b73260d8fe6a4e73155e9f83bb234588b561ab01c9bca6b",
       "authKey": "d$pAbUTpg-Hqr_FPzfemOYaS@&oH#z!Pev&Dr@BI**MgVvPdKSyaakvNNPlO",
       "cart": {
-        "items": [
-          {
-            "title": "pesho",
-            "price": 3,
-            "img": "http://static.baubau.bg/resources/kade-otiva-kotkata-kato-izchezne.jpg",
-            "description": "123"
-          },
-          {
-            "title": "pesho",
-            "price": 3,
-            "img": "http://static.baubau.bg/resources/kade-otiva-kotkata-kato-izchezne.jpg",
-            "description": "123"
-          }
-        ]
+        "items": []
       }
     },
     {
@@ -219,6 +206,14 @@
       "cart": {
         "items": []
       }
+    },
+    {
+      "username": "let",
+      "passHash": "5654d4106d7025c2578858f4fc5ad235c25096b85c3b8d2fb8a064ae3546bb1d",
+      "authKey": "RpcitaCa$OkPed_#HVr=%mgwiYqo!@ybGCo-DLbZlGtL=c*rmXMngNU$mMCL",
+      "cart": {
+        "items": []
+      }
     }
   ],
   "products": [
@@ -262,6 +257,13 @@
       "img": "http://static.baubau.bg/resources/kade-otiva-kotkata-kato-izchezne.jpg",
       "description": "123",
       "date": "2017/05/08"
+    },
+    {
+      "title": "Spaceship Wonnabe",
+      "price": 5,
+      "img": "https://i.ytimg.com/vi/hObbL4DCesI/maxresdefault.jpg",
+      "description": "Yey",
+      "date": "2017/05/09"
     }
   ]
 }

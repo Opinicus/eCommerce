@@ -1,6 +1,6 @@
 module.exports = function (db) {
     function get(request, response) {
-        var products = db.get("products")
+        let products = db.get("products")
             .map((product) => {
                 return {
                     title: product.title,
@@ -16,20 +16,20 @@ module.exports = function (db) {
     }
 
     function post(request, response) {
-        var title = request.body.title;
-        var price = +request.body.price;
-        var img = request.body.img;
-        var description = request.body.description;
+        let title = request.body.title;
+        let price = +request.body.price;
+        let img = request.body.img;
+        let description = request.body.description;
 
         //get current date
-        var date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
+        let date = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
 
         //Instantiate product class here
-        var Product = require("../classes/product-class");
-        var postedProduct = new Product(title, price, img, description, date);
+        let Product = require("../classes/product-class");
+        let postedProduct = new Product(title, price, img, description, date);
 
-        var canPush = true;
-        var products = db.get("products").value();
+        let canPush = true;
+        let products = db.get("products").value();
 
         products.forEach(p => {
             if (p.title === postedProduct.title) {
@@ -48,9 +48,9 @@ module.exports = function (db) {
     }
 
     function getLatest(request, response) {
-        var products = db.get("products").value();
-        var len = products.length;
-        var latest = products.slice(len - 4, len).reverse();
+        let products = db.get("products").value();
+        let len = products.length;
+        let latest = products.slice(len - 4, len).reverse();
 
         response.status(200);
         response.json({

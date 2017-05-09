@@ -2,19 +2,19 @@ import { post as postRequest } from "requester";
 
 export function uploadProduct() {
     //title, price, img, description, category, date
-    var title = $("#productTitle").val();
-    var price = +$("#productPrice").val();
-    var img = $("#img-upload").val();
-    var description = $("#productDescription").val();
+    let title = $("#productTitle").val();
+    let price = +$("#productPrice").val();
+    let img = $("#img-upload").val();
+    let description = $("#productDescription").val();
 
-    var options = {
+    const options = {
         title: title,
         price: price,
         img: img,
         description: description
     };
 
-    var canAdd = true;
+    let canAdd = true;
     if (title === "" || typeof price !== "number" || img === "" || description === "") {
         canAdd = false;
     }

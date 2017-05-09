@@ -1,8 +1,8 @@
 export function showLoginPopUp() {
-    var $popup = $(".inner-container");
-    var $background = $("#disabled-background");
-    var $loginRegisterH1 = $("#login-register-h1");
-    var $submitButton = $("#submit-button");
+    let $popup = $(".inner-container");
+    let $background = $("#disabled-background");
+    let $loginRegisterH1 = $("#login-register-h1");
+    let $submitButton = $("#submit-button");
 
     $popup.removeClass("hidden");
     $background.removeClass("hidden");
@@ -13,10 +13,10 @@ export function showLoginPopUp() {
 }
 
 export function showRegisterPopUp() {
-    var $popup = $(".inner-container");
-    var $background = $("#disabled-background");
-    var $loginRegisterH1 = $("#login-register-h1");
-    var $submitButton = $("#submit-button");
+    let $popup = $(".inner-container");
+    let $background = $("#disabled-background");
+    let $loginRegisterH1 = $("#login-register-h1");
+    let $submitButton = $("#submit-button");
 
     $popup.removeClass("hidden");
     $background.removeClass("hidden");
@@ -27,8 +27,8 @@ export function showRegisterPopUp() {
 }
 
 export function hidePopUp() {
-    var $popup = $(".inner-container");
-    var $background = $("#disabled-background");
+    let $popup = $(".inner-container");
+    let $background = $("#disabled-background");
 
     $popup.addClass("hidden");
     $background.addClass("hidden");
