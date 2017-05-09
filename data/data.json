@@ -34,7 +34,20 @@
       "passHash": "16af0577252ea2fc2b73260d8fe6a4e73155e9f83bb234588b561ab01c9bca6b",
       "authKey": "d$pAbUTpg-Hqr_FPzfemOYaS@&oH#z!Pev&Dr@BI**MgVvPdKSyaakvNNPlO",
       "cart": {
-        "items": []
+        "items": [
+          {
+            "title": "Spaceship Wonnabe",
+            "price": 5,
+            "img": "https://i.ytimg.com/vi/hObbL4DCesI/maxresdefault.jpg",
+            "description": "Yey"
+          },
+          {
+            "title": "kotka",
+            "price": 1,
+            "img": "http://www.kotkite.com/img/articles/2507070936_6_.jpg",
+            "description": "kotka"
+          }
+        ]
       }
     },
     {
