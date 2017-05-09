@@ -10,6 +10,11 @@ body{
     margin-bottom: 70px;
     background-color: transparent;
 }
+#logo{
+    width: 39%;
+    height: 39%;
+}
+
 
 header{
     background-color: #089846;
