@@ -18,13 +18,13 @@ import { uploadProduct } from 'uploadProduct';
 import { filter } from 'filter';
 
 
-var router = new Navigo(null, true);
+const router = new Navigo(null, true);
 router.on("/home", () => {
 	loadTemplate("home", "/api/products/latest", "main");
 
 	setTimeout(() => {
 		$(".add-to-cart-button").on("click", (ev) => {
-			var $parent = $(ev.target).parent().parent().parent();
+			let $parent = $(ev.target).parent().parent().parent();
 			addToCart($parent);
 		});
 	}, 50);
@@ -35,7 +35,7 @@ router.on("/products", () => {
 	setTimeout(() => {
 		filter();
 		$(".add-to-cart-button").on("click", (ev) => {
-			var $parent = $(ev.target).parent().parent().parent();
+			let $parent = $(ev.target).parent().parent().parent();
 			addToCart($parent);
 		});
 	}, 50);
@@ -67,14 +67,14 @@ $("#login-button").on("click", showLoginPopUp);
 $("#register-button").on("click", showRegisterPopUp);
 $("#disabled-background").on("click", hidePopUp);
 $("#submit-button").on("click", (ev) => {
-	var $target = $(ev.target);
+	let $target = $(ev.target);
 	
-	var $username = $("#username-field").val();
-	var $password = $("#password-field").val();
-	var passHash = CryptoJS.SHA256($password);
+	let $username = $("#username-field").val();
+	let $password = $("#password-field").val();
+	let passHash = CryptoJS.SHA256($password);
 	passHash = passHash.toString();
 
-	var user = {
+	let user = {
 		username: $username,
 		passHash: passHash
 	};
@@ -100,7 +100,7 @@ $("#twitter-share-button").on("click", () => {
 
 //rework might be needed
 $(window).on("hashchange", () => {
-	var hash = window.location.hash;
+	let hash = window.location.hash;
 	hash = hash.substr(2);
 
 	//use a switch here to switch templates and fix bug
@@ -120,7 +120,7 @@ $(window).on("load", () => {
 
 //rework might be needed
 $(window).on("ready", () => {
-	var hash = window.location.hash;
+	let hash = window.location.hash;
 	console.log(hash)
 
 });

@@ -1,20 +1,20 @@
 module.exports = function (db) {
     function put(request, response) {
-        var username = request.body.username;
-        var passHash = request.body.passHash;
+        let username = request.body.username;
+        let passHash = request.body.passHash;
 
-        var canLogin = false;
+        let canLogin = false;
 
-        var allUsersObjects = db.get("users").value();
+        let allUsersObjects = db.get("users").value();
 
         if (allUsersObjects.find(u => u.username === username && u.passHash === passHash)) {
             canLogin = true;
         }
 
         if (canLogin) {
-            var currentUser = allUsersObjects
+            let currentUser = allUsersObjects
                 .find(u => u.username === username && u.passHash === passHash);
-            var authKey = currentUser.authKey;
+            let authKey = currentUser.authKey;
             response.json({
                 result: {
                     username: username,
@@ -28,15 +28,15 @@ module.exports = function (db) {
     }
 
     function post(request, response) {
-        var username = request.body.username;
-        var passHash = request.body.passHash;
+        let username = request.body.username;
+        let passHash = request.body.passHash;
 
-        var HASHED_EMPTY_PASSWORD = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
+        let HASHED_EMPTY_PASSWORD = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
 
-        var canRegister = true;
+        let canRegister = true;
 
         //check for a user with the same username
-        var allUsers = db.get("users").map("username").value();
+        let allUsers = db.get("users").map("username").value();
         if (allUsers.find(dbUsername => dbUsername === username)) {
             canRegister = false;
         }
@@ -48,16 +48,16 @@ module.exports = function (db) {
 
         if (canRegister) {
             //Create authKey here
-            var authKeyGenerator = require("../utils/auth-key-generator");
-            var authKey = authKeyGenerator();
+            let authKeyGenerator = require("../utils/auth-key-generator");
+            let authKey = authKeyGenerator();
 
             //Instantiate cart class here
-            var Cart = require("../classes/cart-class");
-            var currentCart = new Cart();
+            let Cart = require("../classes/cart-class");
+            let currentCart = new Cart();
 
             //Instantiate user class here
-            var User = require("../classes/user-class");
-            var registeredUser = new User(username, passHash, authKey, currentCart);
+            let User = require("../classes/user-class");
+            let registeredUser = new User(username, passHash, authKey, currentCart);
 
             db.get("users").push(registeredUser).write();
             response.status(201).json({ user: registeredUser });
@@ -68,7 +68,7 @@ module.exports = function (db) {
     }
 
     function get(request, response) {
-        var allUsersObjects = db.get("users").value();
+        let allUsersObjects = db.get("users").value();
         response.status(200).json({
             result: {
                 users: allUsersObjects
@@ -77,9 +77,9 @@ module.exports = function (db) {
     }
 
     function postInCart(request, response) {
-        var productToAdd = request.body.product;
+        let productToAdd = request.body.product;
 
-        var items = db.get("users")
+        let items = db.get("users")
             .filter({ "authKey": request.body.authKey })
             .map("cart")
             .map("items")
@@ -89,7 +89,7 @@ module.exports = function (db) {
 
         items.push(productToAdd);
 
-        var cart = {
+        let cart = {
             "items": items,
             "numbersOfItems": items.length
         };
@@ -104,12 +104,12 @@ module.exports = function (db) {
     }
 
     function removeFromCart(request, response) {
-        var allUsersObjects = db.get("users").value();
-        var currentUser = allUsersObjects.find(u => u.authKey === request.body.authKey);
+        let allUsersObjects = db.get("users").value();
+        let currentUser = allUsersObjects.find(u => u.authKey === request.body.authKey);
 
-        var index = request.body.index;
+        let index = request.body.index;
 
-        var items = db.get("users")
+        let items = db.get("users")
             .filter({ "authKey": request.body.authKey })
             .map("cart")
             .map("items")
@@ -117,12 +117,12 @@ module.exports = function (db) {
 
         items.splice(index, 1);
 
-        var cart = {
+        let cart = {
             "items": items,
             "numbersOfItems": items.length
         };
 
-        var newArray = allUsersObjects.map(u => {
+        let newArray = allUsersObjects.map(u => {
             if (u.authKey === request.body.authKey) {
                 u.cart.items.splice(index, 1);
                 return u;
@@ -136,15 +136,15 @@ module.exports = function (db) {
     }
 
     function makeOrder(request, response) {
-        var allUsersObjects = db.get("users").value();
-        var currentUser = allUsersObjects.find(u => u.authKey === request.body.authKey);
+        let allUsersObjects = db.get("users").value();
+        let currentUser = allUsersObjects.find(u => u.authKey === request.body.authKey);
 
         if (currentUser.cart.items.length === 0) {
             response.status(400).json("Cart is empty");
             return;
         }
 
-        var newArray = allUsersObjects.map(u => {
+        let newArray = allUsersObjects.map(u => {
             if (u.authKey === request.body.authKey) {
                 u.cart.items = [];
                 return u;
