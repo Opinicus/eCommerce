@@ -40,6 +40,12 @@
             "price": 3,
             "img": "http://static.baubau.bg/resources/kade-otiva-kotkata-kato-izchezne.jpg",
             "description": "123"
+          },
+          {
+            "title": "pesho",
+            "price": 3,
+            "img": "http://static.baubau.bg/resources/kade-otiva-kotkata-kato-izchezne.jpg",
+            "description": "123"
           }
         ]
       }
