@@ -28,7 +28,7 @@ export function login(user) {
             $("#disabled-background").addClass("hidden");
         }, value => {
             //error msg here
-            toastr.error("Username or password is incorrect");
+            toastr.error(value.responseJSON);
         });
 }
 

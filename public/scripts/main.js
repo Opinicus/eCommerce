@@ -14,11 +14,19 @@ import { checkForAdmin } from 'checkForAdmin';
 import { showShoppingCart } from "showShoppingCart";
 import { addToCart } from 'addToCart';
 import { showSelectedProductImage } from 'showSelectedProductImage';
+import { uploadProduct } from 'uploadProduct';
 
 
 var router = new Navigo(null, true);
 router.on("/home", () => {
 	loadTemplate("home", "/api/products/latest", "main");
+
+	setTimeout(() => {
+		$(".add-to-cart-button").on("click", (ev) => {
+			var $parent = $(ev.target).parent().parent().parent();
+			addToCart($parent);
+		});
+	}, 50);
 });
 router.on("/products", () => {
 	loadTemplate("product", "/api/products", "main");
@@ -40,7 +48,8 @@ router.on("/addProduct", () => {
 
 	setTimeout(() => {
 		showSelectedProductImage();
-	}, 50)
+		$("#submit").on("click", uploadProduct);
+	}, 50);
 });
 // TODO: api/shoppingCart data
 router.on("/shoppingCart", () => {
@@ -81,6 +90,10 @@ $("#submit-button").on("click", (ev) => {
 $("#logout-button").on("click", () => {
 	logout();
 	router.navigate("/home");
+});
+
+$("#twitter-share-button").on("click", () => {
+	window.open("https://twitter.com/intent/tweet?text=Awesome%20shop%20for%20spaceships", "Tweet", "height=400,width=700");
 });
 
 //rework might be needed
